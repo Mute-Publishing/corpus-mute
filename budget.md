@@ -2,13 +2,13 @@
 
 A preliminary budget for the Corpus Mute project.
 
-The budget period is: 2025 (July-Dec) 6 months
+The budget period is: 2025/26 (Oct-Mar) 6 months
 
-Budget estimate total: 33,560 €
+Budget total: 33,560 €
 
-Budget prepared by: Simon Worthington, June 2025.
+Budget prepared by: Simon Worthington, Sept 2025.
 
-## Budget expenditure (estimate)
+## Budget expenditure 
 
 | Item                              | Amount Euro (€) |
 |-----------------------------------|-----------------|
@@ -31,6 +31,3 @@ Budget prepared by: Simon Worthington, June 2025.
 | Legal, accounting, bank           | 400 €           |
 | **TOTAL**                         | **33,560 €**    |
 
-## Budget (Actual)
-
-To be confirmed (as available)

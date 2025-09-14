@@ -1,18 +1,16 @@
 # Corpus Mute
 
-_The Mute magazine archive_
+_— A project to catalogue and activate the Mute magazine archive_
 
-## The project
+## Activities
 
   - Catalogue Mute's publishing, projects, and networks
-  - Hosts PubFest events: Exploratory republishing fiestas
-  - Coordinate working group meetings
+  - Host publishing parties: Exploratory republishing gatherings
+  - Coordinate a working group
 
 ## Fundraiser
 
-Support the **Corpus Mute** work by purchasing a copy of the Mute Print Archive or by donations and sponsorship.
-
-See here for information on the [budget requirements](budget.md) for the archival project.
+Support the **Corpus Mute** work by purchasing a copy of the 'Mute Print Archive' or by contributing donations or sponsorship.
 
 **Mute Print Archive:** A limited edition set of the complete print magazine — including the famous FT broadsheet edition, through the glossy magazine series, to the pocket book volume.
 
@@ -31,7 +29,9 @@ See here for information on the [budget requirements](budget.md) for the archiva
          
   - Donatations. We use Liberapay to accept donations [<img src="https://img.shields.io/liberapay/goal/Mute.svg?logo=liberapay">](https://liberapay.com/Mute/) ❤ 
 
-## Call for volunteers to join the working group
+See here for information on the [budget requirements](budget.md) for the archival project.
+
+## Call for volunteers to join the Corpus Mute Working Group
 
 Volunteers needed to support the project. A minimum of four hours a month is a recommendation. No prior experience needed. 
 
@@ -39,7 +39,7 @@ Help is needed with cataloging and other supporting roles: design, writing, even
 
 We are organised as a working group. If you would like to join the working group please check out the [Matrix chat room](https://matrix.to/#/!vwnrbVJtXLkdKAuMCt:matrix.org?via=matrix.org), or join the weekly open meeting to find out more, or get in contact — email: simon@metamute.org.
 
-Training and skilling provided in the following: Editorial style guides; documentation; data modelling; publishing pipelines; PID and schema use; Wikidata, Wikicommons, WikiSource and OpenRefine; using knowledge graph; linked open data; AI LLM RAG; data science processes and tooling, using Jupyter Notebooks; text and data mining (TDM); Git; Python; CSS Paged Media; digital soverienty design; and IDE use.
+Training and skilling provided in the following: Cataloguing, editorial style guides; documentation; and the Wikimedia serivces suite.
 
 Example tasks: Image cataloging on Wikimedia Commons; DOI minting using Datacite; publication cataloging in Wikidata; data model creation for magazine issues; and article processing.
 
@@ -49,13 +49,13 @@ See [current issues](https://codeberg.org/Mute/Corpus-Mute/issues) on Codeberg.
 
 The working group has weekly online video conference meetings or you can join the ongoing discussion in the [Matrix chat room](https://matrix.to/#/!vwnrbVJtXLkdKAuMCt:matrix.org?via=matrix.org).
 
-__Meeting schedule: UTC 16:00, Wednesdays on [Jitsi](https://meet.jit.si/CorpusMute-WorkingGroup) video conference platform.__
+__Meeting schedule: STARTING 1st OCTOBER 2025 UTC 16:00, Wednesdays on [Jitsi](https://meet.jit.si/CorpusMute-WorkingGroup) video conference platform.__
 
 Meeting are open to all. The meetings videos and transcripts are archived online.
 
 ## The work
 
-### Phase #1 (July-Dec 2025): Digital cataloguing and scoping
+### Phase #1 (Oct 2025 - Mar 2026): Digital cataloguing and scoping
 
 #### Tasks
 
@@ -64,11 +64,10 @@ Meeting are open to all. The meetings videos and transcripts are archived online
   - Add a sample article to Wikidata
   - Add Issues covers to Wikimedia Commons
   - Create a Wikimedia Group
-  - Create a Wikibase Cloud instance for Mute
 
 ### Archive status
 
-Current status: Pre-release
+Current status: Pre-release (Sept 2025)
 
   - Scholia - https://scholia.toolforge.org/publisher/Q115486583
   - OpenAlex - https://openalex.org/works?page=1&filter=title_and_abstract.search:mute+magazine
@@ -104,6 +103,4 @@ Content and code open access and open-source (c) Mute Publishing and the authors
 
 GPL 3.0
 
-![GPL 3.0](https://raw.githubusercontent.com/Mute-Publishing/Mute-Magazine-Pilot-00-1994/main/assets/gplv3-with-text-136x68.png "GPL 3.0")
-
-
+![GPL 3.0](button-gpl-source.png "GPL 3.0")
