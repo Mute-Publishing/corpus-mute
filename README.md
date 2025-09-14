@@ -2,106 +2,121 @@
 
 _— A project to catalogue and activate the Mute magazine archive_
 
+Corpus Mute is a _cataloguing project_ for making the *[Mute](https://www.metamute.org/)* magazine archive using modern open scholarship workflows. The goals are to catalogue, explore, connect, and distribute Mute's writing and projects. The workflows use software tooling from the following areas — linked open data (Wikidata), knowledge graphs, open science infrastructures, and digital sovereignty. The results of the Corpus Mute endeavour will be accessible from well-established open scholarship platforms, including — [OpenAlex](https://openalex.org/works?page=1&filter=title_and_abstract.search:mute+magazine), [Wikidata](https://reasonator.toolforge.org/?&lang=mul&q=6943763), [Zenodo](https://zenodo.org/communities/mute), [Archive.org](https://archive.org/details/@metamute?sort=title), [Library Genesis](https://en.wikipedia.org/wiki/Library_Genesis) and many more.
+
+The project aims to profile and give recognition to all who helped create _Mute_ and generously gave their ideas, energy, and hard work: The editors and staff; contributors; those in our network — individuals, projects, and organisations; and to our supporters and funders. 
+
+Mute is actively looking for supporters and partners. Please reach out if your interested in a conversation about the archiving project.  
+
+Coordinator: Simon Worthington, co-founder Mute simon@metamute.org 
+
 ## Activities
 
-  - Catalogue Mute's publishing, projects, and networks
-  - Host publishing parties: Exploratory republishing gatherings
-  - Coordinate a volunteer working group
+  - Cataloguing: Mute's publishing, projects, and networks
+  - Host events: 'Publishing Parties' — exploratory re-publishing gatherings
+  - Coordination: Organising a volunteer working group
 
 ## Fundraiser
 
-Support the **Corpus Mute** work by purchasing a copy of the 'Mute Print Archive' or by contributing donations or sponsorship.
+Support the Corpus Mute project by purchasing a copy of the Mute Print Archive, by making a donation, or contributing sponsorship.
 
-**Mute Print Archive:** A limited edition set of the complete print magazine — including the famous FT broadsheet edition, through the glossy magazine series, to the pocket book volume.
-
-  - Buy the **Mute Print Archive**: The original set of all fifty-one issues of the print versions of the magazine, covering twenty years of publishing from 1994 to 2014.
+The Mute Print Archive is a limited edition of all fifty-one issues of the print issues of the magazine, covering twenty years of publishing from 1994 to 2014. The set including the famous FT broadsheets, through the glossy magazine series, to the pocket book volume.  
   
-    The archive is availabe in four price bands:
+The archive is available in four price bands:
 
-      1. Contributors and supporters: 1200 € (50% discount);
-      2. Standard: 2400 €;
-      3. Sponsors (starting at): 4000 € — [see options here](https://archive.metamute.org/product-category/print-archive/);
-      4. Distributor discount: 1440 € (40% discount).
+1. Contributors and supporters:* 1200 € (=50% discount);
+2. Standard: 2400 €;
+3. Sponsors: 4000 €;
+4. Distributor discount: 1440 € (=40% discount).
 
-    All Mute Print Archive purchasing information can be found here — [info and purchase link](https://archive.metamute.org/product-category/print-archive/).
+*Supporters: If you had some sort of working relationship or involvement, as individuals or institutions, over Mute's working life thenyou're a supporter :-)
 
-    Note: Pricing available on request for Global South regions based on purchasing power parity (PPP) indicise — see: [Eurostat data](https://ec.europa.eu/eurostat/statistics-explained/index.php?oldid=670267). PPPs convert different currencies into a common unit equalizes their purchasing power and eliminating differences in price levels between economies. (Eurostat)
+Postage and packing is extra, plus any taxes or import duties.
+
+See [https://archive.metamute.org/](https://archive.metamute.org/) for purchasing details, a full list of print issues, and more information. Prices are shown in regional currencies.
+
+Note: For Global South regions pricing is available based on purchasing power parity (PPP) indicises — see: [Eurostat data](https://ec.europa.eu/eurostat/statistics-explained/index.php?oldid=670267). PPPs convert different currencies into a common unit which equalizes their purchasing power and eliminates differences in price levels between economies. (Eurostat) Please get in contact directly for prices.
          
-  - Donatations. We use Liberapay to accept donations [<img src="https://img.shields.io/liberapay/goal/Mute.svg?logo=liberapay">](https://liberapay.com/Mute/) ❤ 
+### Donations
 
-See here for information on the [budget requirements](budget.md) for the archival project.
+We use Liberapay to accept donations. Donations can be made a one-off payment or as recoccuring subcriptions.
 
-## Call for volunteers to join the Corpus Mute Working Group
+[<img src="https://img.shields.io/liberapay/goal/Mute.svg?logo=liberapay">](https://liberapay.com/Mute/). ❤
 
-Volunteers needed to support the project. A minimum of four hours a month is a recommendation. No prior experience needed. 
+### Sponsorship
 
-Help is needed with cataloging and other supporting roles: design, writing, event organisation, community organising, coding, as product owners, and as section coordinators.
+Sponsorship is welcome. Sponsors are encouraged to purchase the Mute Print Archive  — Sponsors edition at a price of 4000 € which can be purchased [here](https://archive.metamute.org/). Sponsors will be included in our special sponsors page. 
 
-We are organised as a working group. If you would like to join the working group please check out the [Matrix chat room](https://matrix.to/#/!vwnrbVJtXLkdKAuMCt:matrix.org?via=matrix.org), or join the weekly open meeting to find out more, or get in contact — email: simon@metamute.org.
+Direct sponsorship and inkind sponsorship and partnerships are also welcome. Feel free to support a publishing party event!
 
-Training and skilling provided in the following: Cataloguing, editorial style guides; documentation; and the Wikimedia serivces suite.
+### Project budget
 
-Example tasks: Image cataloging on Wikimedia Commons; DOI minting using Datacite; publication cataloging in Wikidata; data model creation for magazine issues; and article processing.
+See the [budget page](budget.md) for information on the planned project expenditure requirements.
 
-See [current issues](https://codeberg.org/Mute/Corpus-Mute/issues) on Codeberg.
+The costs listed are the minimal overheads needed to run the project.
 
-### Weekly meetings
+Currently the project does not receive any grant funding. (Sept 2025)
+
+## Call for volunteers to join the project working group
+
+Volunteers are needed to support the project.
+
+Help is needed with cataloguing and other supporting roles: design, writing, event organisation, community organising, and coding.
+
+We are organised as a working group. If you would like to join the working group please check out the [Matrix chat room](https://matrix.to/#/!vwnrbVJtXLkdKAuMCt:matrix.org?via=matrix.org), or join the weekly open meeting to find out more, or get in contact — e-mail: simon@metamute.org.
+
+Training is provided from a peer-learning network for cataloguing, linked open data, knowledge graphs, and metadata.
+
+See [open tasks](https://codeberg.org/Mute/Corpus-Mute/issues) on Codeberg Git repository.
+
+### Weekly working group meetings
 
 The working group has weekly online video conference meetings or you can join the ongoing discussion in the [Matrix chat room](https://matrix.to/#/!vwnrbVJtXLkdKAuMCt:matrix.org?via=matrix.org).
 
-__Meeting schedule: STARTING 1st OCTOBER 2025 UTC 16:00, Wednesdays on [Jitsi](https://meet.jit.si/CorpusMute-WorkingGroup) video conference platform.__
+__Meeting schedule: STARTING 1st OCTOBER 2025. UTC 16:00, every Wednesdays on [Jitsi](https://meet.jit.si/CorpusMute-WorkingGroup) video conference platform.__
 
-Meeting are open to all. The meetings videos and transcripts are archived online.
+See event schedule for the next meeting and subscribe to [calendar](https://archive.metamute.org/events/) feed.
+
+Meeting are open to all. The meeting videos and transcripts will be archived online.
 
 ## The work
 
-### Phase #1 (Oct 2025 - Mar 2026): Digital cataloguing and scoping
+### Phase #1 (Oct-Dec 2025): Exploratory cataloguing and project scoping
 
 #### Tasks
 
-  - Design data model for magazine issues and articles
-  - Catalogue issues in Wikidata and Wikibase Cloud
-  - Add a sample article to Wikidata
-  - Add Issues covers to Wikimedia Commons
-  - Create a Wikimedia Group
+  - Design a data model for magazine issues and articles for use in knowledge graphs and LLMs. The first iteration would be a skeleton data model, built bottom up, to understand what could be included. The data model would be built in a Wikibase instance
+  - Catalogue magazine issues with basic metadata in Wikidata, Wikibase Cloud, and Wikimedia Commons
+  - Create sample persistent identifiers and evaluate their use: ROR, DOIs, ORCIDs, ConfIDent, etc.
+  - Upload all magazine covers to Wikimedia Commons
 
 ### Archive status
 
-Current status: Pre-release (Sept 2025)
+Current status: Pre-release
 
-  - Scholia - https://scholia.toolforge.org/publisher/Q115486583
-  - OpenAlex - https://openalex.org/works?page=1&filter=title_and_abstract.search:mute+magazine
-  - Wikidata (Reasonator) - https://reasonator.toolforge.org/?&lang=mul&q=6943763
-  - Wikibase Cloud - https://corpus-mute.wikibase.cloud/
-  - Wikimedia commons - https://commons.wikimedia.org/wiki/Category:Mute_Magazine
-  - Archive.org - https://archive.org/details/@metamute?sort=title
-  - Codeberg - https://codeberg.org/Mute/Corpus-Mute
-  - DOI records (Zenodo) - https://zenodo.org/communities/mute
-  - Research Organization Registry (ROR) - https://ror.org/002g5jp68
+Below are some sample views into Mute's open scholarship data records. These are the types of repositories that the project will distribute to:
 
-## Info, documentation, and contact
+  - [Zenodo - sample article](https://zenodo.org/communities/mute)
+  - [Wikidata - top level organisation record](https://www.wikidata.org/wiki/Q6943763)
+  - [Wikimedia Commons - media uploads](https://commons.wikimedia.org/wiki/Category:Mute)
+  - [Research Organization Registry (ROR) - organisation Persistent identifier](https://ror.org/002g5jp68)
 
-[Code - on Codeberg Git repo](https://codeberg.org/Mute/Corpus-Mute)
+## Info, documentation, and contact details
 
-[Matrix chat room - public](https://matrix.to/#/!vwnrbVJtXLkdKAuMCt:matrix.org?via=matrix.org)
+  - [Code - on Codeberg Git repo](https://codeberg.org/Mute/Corpus-Mute)
+  - [Matrix chat room - public](https://matrix.to/#/!vwnrbVJtXLkdKAuMCt:matrix.org?via=matrix.org)
+  - [Project tasks and work log](https://codeberg.org/Mute/Corpus-Mute/issues) - please volunteer
+  - Mastodon - [metamute@fosstodon.org](https://fosstodon.org/@metamute)
+  - Contact: Simon Worthington #bookliberationist - simon@metamute.org - [@mrchristian@openbiblio.social](https://openbiblio.social/@mrchristian)
 
-[Project Tasks and work log](https://codeberg.org/Mute/Corpus-Mute/issues) - please volunteer
-
-  * [Mute Archive Plan](https://codeberg.org/Mute/Corpus-Mute/issues)
-  * [Mute Archive Guide](https://codeberg.org/Mute/Corpus-Mute/issues)
-
-Contact: Simon Worthington #bookliberationist - simon@metamute.org - [@mrchristian@openbiblio.social](https://openbiblio.social/@mrchristian) 
-
-Mute Mastodon account [https://fosstodon.org/@metamute](https://fosstodon.org/@metamute)
-
-
-## Licence
+## Licences
 
 Content and code open access and open-source (c) Mute Publishing and the authors.
 
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+Content: This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 
-GPL 3.0
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 
-<img src="gpl.png" alt="GPL 3.0" width="100"/>
+Code: GPL 3.0
 
+<img src="gpl.png" alt="GPL 3.0" width="85"/>
