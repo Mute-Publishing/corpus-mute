@@ -103,4 +103,4 @@ Content and code open access and open-source (c) Mute Publishing and the authors
 
 GPL 3.0
 
-![GPL 3.0](button-gpl-source.png "GPL 3.0")
+<img src="button-gpl-source.png" alt="GPL 3.0" width="100"/>
