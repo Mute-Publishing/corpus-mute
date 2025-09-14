@@ -6,7 +6,7 @@ _— A project to catalogue and activate the Mute magazine archive_
 
   - Catalogue Mute's publishing, projects, and networks
   - Host publishing parties: Exploratory republishing gatherings
-  - Coordinate a working group
+  - Coordinate a volunteer working group
 
 ## Fundraiser
 
@@ -20,12 +20,12 @@ Support the **Corpus Mute** work by purchasing a copy of the 'Mute Print Archive
 
       1. Contributors and supporters: 1200 € (50% discount);
       2. Standard: 2400 €;
-      3. Sponsors (starting at): 4000 € — see options here;
+      3. Sponsors (starting at): 4000 € — [see options here](https://archive.metamute.org/product-category/print-archive/);
       4. Distributor discount: 1440 € (40% discount).
 
-    Note: Pricing available on request for Global South regions based on purchasing power parity (PPP) indicise — see: [Eurostat data](https://ec.europa.eu/eurostat/statistics-explained/index.php?oldid=670267). PPPs convert different currencies into a common unit equalizes their purchasing power and eliminating differences in price levels between economies. (Eurostat)
+    All Mute Print Archive purchasing information can be found here — [info and purchase link](https://archive.metamute.org/product-category/print-archive/).
 
-    All Mute Print Archive purchasing information can be found here — [info and purchase link](https://archive.metamute.org/product/mute-magazine-print-archive/).
+    Note: Pricing available on request for Global South regions based on purchasing power parity (PPP) indicise — see: [Eurostat data](https://ec.europa.eu/eurostat/statistics-explained/index.php?oldid=670267). PPPs convert different currencies into a common unit equalizes their purchasing power and eliminating differences in price levels between economies. (Eurostat)
          
   - Donatations. We use Liberapay to accept donations [<img src="https://img.shields.io/liberapay/goal/Mute.svg?logo=liberapay">](https://liberapay.com/Mute/) ❤ 
 
