@@ -2,11 +2,11 @@
 
 _— A project to catalogue and activate the Mute magazine archive_
 
-Corpus Mute is a _cataloguing project_ for making the *[Mute](https://www.metamute.org/)* magazine archive using modern open scholarship workflows. The goals are to catalogue, explore, connect, and distribute Mute's writing and projects. The workflows use software tooling from the following areas — linked open data (Wikidata), knowledge graphs, open science infrastructures, and digital sovereignty. The results of the Corpus Mute endeavour will be accessible from well-established open scholarship platforms, including — [OpenAlex](https://openalex.org/works?page=1&filter=title_and_abstract.search:mute+magazine), [Wikidata](https://reasonator.toolforge.org/?&lang=mul&q=6943763), [Zenodo](https://zenodo.org/communities/mute), [Archive.org](https://archive.org/details/@metamute?sort=title), [Library Genesis](https://en.wikipedia.org/wiki/Library_Genesis) and many more.
+Corpus Mute is a _cataloguing project_ for making the *[Mute](https://www.metamute.org/)* magazine archive using modern open scholarship workflows. The goals are to catalogue, explore, connect, and distribute Mute's writing and projects. The workflows use software tooling from the following areas — linked open data [(Wikidata)](https://www.wikidata.org/wiki/Q115486583), knowledge graphs, open science infrastructures, and digital sovereign infrastructures. The results of the Corpus Mute endeavour will be accessible from well-established open scholarship platforms, including — [OpenAlex](https://openalex.org/works?page=1&filter=title_and_abstract.search:mute+magazine), [Wikidata](https://reasonator.toolforge.org/?&lang=mul&q=6943763), [Zenodo](https://zenodo.org/communities/mute), [Archive.org](https://archive.org/details/@metamute?sort=title), [Library Genesis](https://en.wikipedia.org/wiki/Library_Genesis) and many more.
 
 The project aims to profile and give recognition to all who helped create _Mute_ and generously gave their ideas, energy, and hard work: The editors and staff; contributors; those in our network — individuals, projects, and organisations; and to our supporters and funders. 
 
-Mute is actively looking for supporters and partners. Please reach out if your interested in a conversation about the archiving project.  
+Mute is actively looking for supporters and partners. Please reach out if you're interested in a conversation about the archiving project.  
 
 Coordinator: Simon Worthington, co-founder Mute simon@metamute.org 
 
@@ -20,7 +20,7 @@ Coordinator: Simon Worthington, co-founder Mute simon@metamute.org
 
 Support the Corpus Mute project by purchasing a copy of the Mute Print Archive, by making a donation, or contributing sponsorship.
 
-The Mute Print Archive is a limited edition of all fifty-one issues of the print issues of the magazine, covering twenty years of publishing from 1994 to 2014. The set including the famous FT broadsheets, through the glossy magazine series, to the pocket book volume.  
+The Mute Print Archive is a limited edition of all fifty-one issues of the print issues of the magazine, covering twenty years of publishing from 1994 to 2014. The set includes the famous FT broadsheets, through the glossy magazine series, to the pocket book volume.  
   
 The archive is available in four price bands:
 
@@ -29,17 +29,17 @@ The archive is available in four price bands:
 3. Sponsors: 4000 €;
 4. Distributor discount: 1440 € (=40% discount).
 
-*Supporters: If you had some sort of working relationship or involvement, as individuals or institutions, over Mute's working life thenyou're a supporter :-)
+*Supporters: If you had some sort of working relationship or involvement, as individuals or institutions, over Mute's working life then you're a supporter :-)
 
 Postage and packing is extra, plus any taxes or import duties.
 
 See [https://archive.metamute.org/](https://archive.metamute.org/) for purchasing details, a full list of print issues, and more information. Prices are shown in regional currencies.
 
-Note: For Global South regions pricing is available based on purchasing power parity (PPP) indicises — see: [Eurostat data](https://ec.europa.eu/eurostat/statistics-explained/index.php?oldid=670267). PPPs convert different currencies into a common unit which equalizes their purchasing power and eliminates differences in price levels between economies. (Eurostat) Please get in contact directly for prices.
+Note: For Global South regions pricing is available based on purchasing power parity (PPP) indices — see: [Eurostat data](https://ec.europa.eu/eurostat/statistics-explained/index.php?oldid=670267). PPPs convert different currencies into a common unit which equalizes their purchasing power and eliminates differences in price levels between economies. (Eurostat) Please get in contact directly for prices.
          
 ### Donations
 
-We use Liberapay to accept donations. Donations can be made a one-off payment or as recoccuring subcriptions.
+We use Liberapay to accept donations. Donations can be made a one-off payment or as recurring subscriptions.
 
 [<img src="https://img.shields.io/liberapay/goal/Mute.svg?logo=liberapay">](https://liberapay.com/Mute/). ❤
 
@@ -47,7 +47,7 @@ We use Liberapay to accept donations. Donations can be made a one-off payment or
 
 Sponsorship is welcome. Sponsors are encouraged to purchase the Mute Print Archive  — Sponsors edition at a price of 4000 € which can be purchased [here](https://archive.metamute.org/). Sponsors will be included in our special sponsors page. 
 
-Direct sponsorship and inkind sponsorship and partnerships are also welcome. Feel free to support a publishing party event!
+Direct sponsorship and in kind sponsorship and partnerships are also welcome. Feel free to support a publishing party event!
 
 ### Project budget
 
@@ -73,11 +73,11 @@ See [open tasks](https://codeberg.org/Mute/Corpus-Mute/issues) on Codeberg Git r
 
 The working group has weekly online video conference meetings or you can join the ongoing discussion in the [Matrix chat room](https://matrix.to/#/!vwnrbVJtXLkdKAuMCt:matrix.org?via=matrix.org).
 
-__Meeting schedule: STARTING 1st OCTOBER 2025. UTC 16:00, every Wednesdays on [Jitsi](https://meet.jit.si/CorpusMute-WorkingGroup) video conference platform.__
+__Meeting schedule: STARTING 1st OCTOBER 2025. UTC 16:00, every Wednesday on [Jitsi](https://meet.jit.si/CorpusMute-WorkingGroup) video conference platform.__
 
-See event schedule for the next meeting and subscribe to [calendar](https://archive.metamute.org/events/) feed.
+See the event schedule for the next meeting and subscribe to the [calendar](https://archive.metamute.org/events/) feed.
 
-Meeting are open to all. The meeting videos and transcripts will be archived online.
+Meetings are open to all. The meeting videos and transcripts will be archived online.
 
 ## The work
 
@@ -119,4 +119,4 @@ Content: This work is licensed under a <a rel="license" href="http://creativecom
 
 Code: GPL 3.0
 
-<img src="gpl.png" alt="GPL 3.0" width="85"/>
+<img src="images/gpl.png" alt="GPL 3.0" width="85"/>
