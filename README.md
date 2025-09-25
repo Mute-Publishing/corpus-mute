@@ -33,7 +33,7 @@ The archive is available in four price bands:
 
 Postage and packing is extra, plus any taxes or import duties.
 
-See [https://archive.metamute.org/](https://archive.metamute.org/) for purchasing details, a full list of print issues, and more information. Prices are shown in regional currencies.
+See [https://archive.metamute.org/](https://archive.metamute.org/) for purchasing details, a full list of print issues, and more information. Prices are shown in regional currencies. Please email simon@metamute.org for institutional invoicing or other enquiries.
 
 Note: For Global South regions pricing is available based on purchasing power parity (PPP) indices — see: [Eurostat data](https://ec.europa.eu/eurostat/statistics-explained/index.php?oldid=670267). PPPs convert different currencies into a common unit which equalizes their purchasing power and eliminates differences in price levels between economies. (Eurostat) Please get in contact directly for prices.
          
@@ -119,4 +119,4 @@ Content: This work is licensed under a <a rel="license" href="http://creativecom
 
 Code: GPL 3.0
 
-<img src="gpl.png" alt="GPL 3.0" width="85"/>
+<img src="images/gpl.png" alt="GPL 3.0" width="85"/>
