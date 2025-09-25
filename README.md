@@ -119,4 +119,4 @@ Content: This work is licensed under a <a rel="license" href="http://creativecom
 
 Code: GPL 3.0
 
-<img src="images/gpl.png" alt="GPL 3.0" width="85"/>
+<img src="gpl.png" alt="GPL 3.0" width="85"/>
