@@ -1,6 +1,6 @@
 # Corpus Mute
 
-_— A project to catalogue and activate the Mute magazine archive_
+_— A cataloguing project to activate the Mute magazine archive_
 
 Corpus Mute is a _cataloguing project_ for making the *[Mute](https://www.metamute.org/)* magazine archive using modern open scholarship workflows. The goals are to catalogue, explore, connect, and distribute Mute's writing and projects. The workflows use software tooling from the following areas — linked open data [(Wikidata)](https://www.wikidata.org/wiki/Q115486583), knowledge graphs, open science infrastructures, and digital sovereign infrastructures. The results of the Corpus Mute endeavour will be accessible from well-established open scholarship platforms, including — [OpenAlex](https://openalex.org/works?page=1&filter=title_and_abstract.search:mute+magazine), [Wikidata](https://reasonator.toolforge.org/?&lang=mul&q=6943763), [Zenodo](https://zenodo.org/communities/mute), [Archive.org](https://archive.org/details/@metamute?sort=title), [Library Genesis](https://en.wikipedia.org/wiki/Library_Genesis) and many more.
 
