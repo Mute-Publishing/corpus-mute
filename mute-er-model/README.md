@@ -58,3 +58,31 @@ Before preparing any Wikidata upload draft, manually review these fields in `iss
 - `language`
 
 Use `issues_qa_report.csv` to review excluded rows and summary counts.
+
+## TDM from Issue URLs
+
+You can harvest article links from each issue page, then build article and contributor lists.
+
+Script:
+
+- `mute-er-model/etl/tdm_issue_articles.py`
+
+Outputs:
+
+- `mute-er-model/output/issue_article_links.csv`
+- `mute-er-model/output/articles_catalog.csv`
+- `mute-er-model/output/contributors_catalog.csv`
+- `mute-er-model/output/tdm_crawl_report.csv`
+
+### Pilot run for one issue only
+
+```powershell
+.venv\Scripts\python.exe mute-er-model\etl\tdm_issue_articles.py --limit 1 --suffix pilot1
+```
+
+Pilot output files:
+
+- `mute-er-model/output/issue_article_links_pilot1.csv`
+- `mute-er-model/output/articles_catalog_pilot1.csv`
+- `mute-er-model/output/contributors_catalog_pilot1.csv`
+- `mute-er-model/output/tdm_crawl_report_pilot1.csv`
