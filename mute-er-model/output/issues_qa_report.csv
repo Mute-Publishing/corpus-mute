@@ -1,0 +1,6 @@
+source_row,source_inventory_number,issue_label_raw,source_url_raw,qa_status,qa_reason,qa_action
+53,,Special insert,Special insert,excluded,missing_inventory_number,review manually
+54,,Box 1,Box 1,excluded,missing_inventory_number,review manually
+55,,Box 2,Box 2,excluded,missing_inventory_number,review manually
+SUMMARY,,,,normalized_count,51,target is 51
+SUMMARY,,,,excluded_count,3,verify excluded rows

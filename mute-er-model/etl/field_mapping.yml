@@ -1,0 +1,99 @@
+source:
+  workbook: mute-er-model/data.xlsx
+  sheet: Sheet1
+  columns:
+    A: Inventory number
+    B: Issue
+    C: URL
+
+transforms:
+  issue_label_raw:
+    from: Issue
+    note: Preserve original issue string from spreadsheet.
+  source_url_raw:
+    from: URL
+    note: In current data, URL duplicates Issue text; kept for provenance.
+  source_inventory_number:
+    from: Inventory number
+    cast: integer
+  series_title:
+    value: Mute
+  issue_parsing_pattern:
+    description: Parse issue metadata in stages to support punctuation variants and trailing notes.
+    stage_1_regex: '^\s*Mute\s+Vol\.?\s*(\d+)\s*,\s*No\.?\s*([0-9A-Za-z.-]+)\s*(.*)$'
+    stage_2_logic:
+      - split tail on ', ISSN' into pre_issn and post_issn
+      - parse year and month at end of pre_issn
+      - parse ISSN token at start of post_issn
+      - parse ISBN anywhere in full string
+    fields:
+      - volume
+      - number
+      - issue_title
+      - publication_year
+      - publication_month
+      - issn_issue_token
+      - isbn
+  issn_split:
+    input: issn_issue_token
+    output:
+      issn_print: first two hyphen groups
+      issue_identifier_local: remaining hyphen groups
+  month_normalization:
+    input: publication_month
+    output: publication_month_num
+    accepted_variants:
+      jan: 1
+      january: 1
+      feb: 2
+      february: 2
+      mar: 3
+      march: 3
+      apr: 4
+      april: 4
+      may: 5
+      jun: 6
+      june: 6
+      jul: 7
+      july: 7
+      aug: 8
+      august: 8
+      sep: 9
+      sept: 9
+      september: 9
+      oct: 10
+      october: 10
+      nov: 11
+      november: 11
+      dec: 12
+      december: 12
+  publication_date_iso:
+    format: YYYY-MM
+    source:
+      - publication_year
+      - publication_month_num
+  ordering:
+    sort_key_chronological: publication_date_iso + inventory number
+    sort_key_printed: volume + number
+    sort_key_final: chronological key + printed key
+
+filters:
+  include_rows:
+    - inventory number is present
+    - issue string matches issue_parsing_pattern
+  exclude_rows:
+    - inventory number missing
+    - parse failure
+
+defaults:
+  language: en
+  cover_url_or_reference: ''
+
+qa_flags:
+  - qa_needs_title_check
+  - qa_needs_date_check
+  - qa_needs_numbering_check
+  - qa_needs_cover_check
+  - qa_needs_language_check
+  - qa_possible_duplicate
+  - qa_sort_key_collision
