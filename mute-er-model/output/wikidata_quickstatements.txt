@@ -1,0 +1,574 @@
+CREATE
+LAST	Len	"Mute Vol 1, No. 1 - Homo Ludens"
+LAST	Den	"issue of Mute magazine, 1995-05"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"1"
+LAST	P577	+1995-05-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-1-homo-ludens.html"
+LAST	P1476	en:"Homo Ludens"
+CREATE
+LAST	Len	"Mute Vol 1, No. 2 - The Chocolate Covered Highway"
+LAST	Den	"issue of Mute magazine, 1995-06"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"2"
+LAST	P577	+1995-06-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-2-chocolate-covered-highway.html"
+LAST	P1476	en:"The Chocolate Covered Highway"
+CREATE
+LAST	Len	"Mute Vol 1, No. 4 - Analogue City"
+LAST	Den	"issue of Mute magazine, 1995-12"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"4"
+LAST	P577	+1995-12-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-4-analogue-city.html"
+LAST	P1476	en:"Analogue City"
+CREATE
+LAST	Len	"Mute Vol 1, No. 5"
+LAST	Den	"issue of Mute magazine, 1996-06"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"5"
+LAST	P577	+1996-06-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-5.html"
+CREATE
+LAST	Len	"Mute Vol 1, No. 6"
+LAST	Den	"issue of Mute magazine, 1996-09"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"6"
+LAST	P577	+1996-09-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-6.html"
+CREATE
+LAST	Len	"Mute Vol 1, No. 7"
+LAST	Den	"issue of Mute magazine, 1996-11"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"7"
+LAST	P577	+1996-11-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-7.html"
+CREATE
+LAST	Len	"Mute Vol 1, No. 8 - Cyberfeminism"
+LAST	Den	"issue of Mute magazine, 1997-08"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"8"
+LAST	P577	+1997-08-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-8-%E2%80%93-cyberfeminism.html"
+LAST	P1476	en:"Cyberfeminism"
+CREATE
+LAST	Len	"Mute Vol 1, No. 10 - Mongrel Culture"
+LAST	Den	"issue of Mute magazine, 1998-04"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"10"
+LAST	P577	+1998-04-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.10-%E2%80%93-mongrel-culture.html"
+LAST	P1476	en:"Mongrel Culture"
+CREATE
+LAST	Len	"Mute Vol 1, No. 11 - Vote Now! Net. Sex, Net. Money, Net. Work"
+LAST	Den	"issue of Mute magazine, 1998-08"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"11"
+LAST	P577	+1998-08-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-11-%E2%80%93-vote-now-net.-sex-net.-money-net.-work.html"
+LAST	P1476	en:"Vote Now! Net. Sex, Net. Money, Net. Work"
+CREATE
+LAST	Len	"Mute Vol 1, No. 12 - Bringing It All Back Home"
+LAST	Den	"issue of Mute magazine, 1999-01"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"12"
+LAST	P577	+1999-01-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-12-%E2%80%93-bringing-it-all-back-home.html"
+LAST	P1476	en:"Bringing It All Back Home"
+CREATE
+LAST	Len	"Mute Vol 1, No. 13 - Next Five Minutes: Tactical Media"
+LAST	Den	"issue of Mute magazine, 1999-06"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"13"
+LAST	P577	+1999-06-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-13-%E2%80%93-next-five-minutes-tactical-media.html"
+LAST	P1476	en:"Next Five Minutes: Tactical Media"
+CREATE
+LAST	Len	"Mute Vol 1, No. 14 - Space: Intergalactic Overdrive"
+LAST	Den	"issue of Mute magazine, 1999-09"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"14"
+LAST	P577	+1999-09-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-14-%E2%80%93-space-intergalactic-overdrive.html"
+LAST	P1476	en:"Space: Intergalactic Overdrive"
+CREATE
+LAST	Len	"Mute Vol 1, No. 15 - Y2K Positive: Bring Your Own Media"
+LAST	Den	"issue of Mute magazine, 2000-01"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"15"
+LAST	P577	+2000-01-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-15-%E2%80%93-y2k-positive-bring-your-own-media.html"
+LAST	P1476	en:"Y2K Positive: Bring Your Own Media"
+CREATE
+LAST	Len	"Mute Vol 1, No. 16 - Art Wars"
+LAST	Den	"issue of Mute magazine, 2000-05"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"16"
+LAST	P577	+2000-05-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-16-%E2%80%93-art-wars.html"
+LAST	P1476	en:"Art Wars"
+CREATE
+LAST	Len	"Mute Vol 1, No. 17 - Europe Undone"
+LAST	Den	"issue of Mute magazine, 2000-06"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"17"
+LAST	P577	+2000-06-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-17-%E2%80%93-europe-undone.html"
+LAST	P1476	en:"Europe Undone"
+CREATE
+LAST	Len	"Mute Vol 1, No. 18 - I Am The Network"
+LAST	Den	"issue of Mute magazine, 2000-11"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"18"
+LAST	P577	+2000-11-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-18-%E2%80%93-i-am-network.html"
+LAST	P1476	en:"I Am The Network"
+CREATE
+LAST	Len	"Mute Vol 1, No. 19 - Global Systems Meltdown"
+LAST	Den	"issue of Mute magazine, 2001-04"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"19"
+LAST	P577	+2001-04-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-19-%E2%80%93-global-systems-meltdown.html"
+LAST	P1476	en:"Global Systems Meltdown"
+CREATE
+LAST	Len	"Mute Vol 1, No. 20 - Digital Commons?"
+LAST	Den	"issue of Mute magazine, 2001-07"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"20"
+LAST	P577	+2001-07-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-20-%E2%80%93-digital-commons.html"
+LAST	P1476	en:"Digital Commons?"
+CREATE
+LAST	Len	"Mute Vol 1, No. 21 - Total Paranoia"
+LAST	Den	"issue of Mute magazine, 2001-09"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"21"
+LAST	P577	+2001-09-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-21-%E2%80%93-total-paranoia-metamap.html"
+LAST	P1476	en:"Total Paranoia"
+CREATE
+LAST	Len	"Mute Vol 1, No. 22 - The Art Issue"
+LAST	Den	"issue of Mute magazine, 2001-12"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"22"
+LAST	P577	+2001-12-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-22-%E2%80%93-art-issue.html"
+LAST	P1476	en:"The Art Issue"
+CREATE
+LAST	Len	"Mute Vol 1, No. 23 - Info-War V.2.0"
+LAST	Den	"issue of Mute magazine, 2002-03"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"23"
+LAST	P577	+2002-03-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-23-%E2%80%93-info-war-v.2.0.html"
+LAST	P1476	en:"Info-War V.2.0"
+CREATE
+LAST	Len	"Mute Vol 1, No. 24 - Beach or Border?"
+LAST	Den	"issue of Mute magazine, 2002-05"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"24"
+LAST	P577	+2002-05-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-24-%E2%80%93-beach-or-border.html"
+LAST	P1476	en:"Beach or Border?"
+CREATE
+LAST	Len	"Mute Vol 1, No. 25 - (Winter/Spring 2003)"
+LAST	Den	"issue of Mute magazine, 2002-11"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"25"
+LAST	P577	+2002-11-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-25-winterspring-2003.html"
+LAST	P1476	en:"(Winter/Spring 2003)"
+CREATE
+LAST	Len	"Mute Vol 1, No. 26 - (Summer/Autumn 2003)"
+LAST	Den	"issue of Mute magazine, 2003-06"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"26"
+LAST	P577	+2003-06-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-26-summerautumn-2003.html"
+LAST	P1476	en:"(Summer/Autumn 2003)"
+CREATE
+LAST	Len	"Mute Vol 1, No. 27 - (Winter/Spring 2004)"
+LAST	Den	"issue of Mute magazine, 2003-11"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"27"
+LAST	P577	+2003-11-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-27-winterspring-2004.html"
+LAST	P1476	en:"(Winter/Spring 2004)"
+CREATE
+LAST	Len	"Mute Vol 1, No. 28 - (Summer/Autumn 2004)"
+LAST	Den	"issue of Mute magazine, 2004-06"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"28"
+LAST	P577	+2004-06-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-28-summerautumn-2004.html"
+LAST	P1476	en:"(Summer/Autumn 2004)"
+CREATE
+LAST	Len	"Mute Vol 1, No. 29 - The Precarious Issue"
+LAST	Den	"issue of Mute magazine, 2005-02"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"1"
+LAST	P433	"29"
+LAST	P577	+2005-02-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-1-no.-29-%E2%80%93-precarious-issue.html"
+LAST	P1476	en:"The Precarious Issue"
+CREATE
+LAST	Len	"Mute Vol 2, No. 0 - Precarious Reader"
+LAST	Den	"issue of Mute magazine, 2005-09"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"2"
+LAST	P433	"0"
+LAST	P577	+2005-09-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-2-no.-0-%E2%88%92-precarious-reader.html"
+LAST	P1476	en:"Precarious Reader"
+LAST	P212	"9780955066405"
+CREATE
+LAST	Len	"Mute Vol 2, No. 1 - Underneath The Knowledge Commons"
+LAST	Den	"issue of Mute magazine, 2005-12"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"2"
+LAST	P433	"1"
+LAST	P577	+2005-12-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-2-no.-1-%E2%88%92-underneath-knowledge-commons.html"
+LAST	P1476	en:"Underneath The Knowledge Commons"
+CREATE
+LAST	Len	"Mute Vol 2, No. 2 - Dis-Integrating Multiculturalism"
+LAST	Den	"issue of Mute magazine, 2006-06"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"2"
+LAST	P433	"2"
+LAST	P577	+2006-06-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-2-no.-2-%E2%88%92-dis-integrating-multiculturalism.html"
+LAST	P1476	en:"Dis-Integrating Multiculturalism"
+CREATE
+LAST	Len	"Mute Vol 2, No. 3 - Naked Cities: Struggle in the Global Slums"
+LAST	Den	"issue of Mute magazine, 2006-10"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"2"
+LAST	P433	"3"
+LAST	P577	+2006-10-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"https://www.metamute.org/editorial/magazine/mute-vol-2-no.-3--naked-cities-struggle-global-slums.html"
+LAST	P1476	en:"Naked Cities: Struggle in the Global Slums"
+CREATE
+LAST	Len	"Mute Vol 2, No. 4 - Web 2.0 Man's Best Friendster"
+LAST	Den	"issue of Mute magazine, 2007-01"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"2"
+LAST	P433	"4"
+LAST	P577	+2007-01-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-2-no.-4-%E2%88%92-web-2.0-mans-best-friendster.html"
+LAST	P1476	en:"Web 2.0 Man's Best Friendster"
+CREATE
+LAST	Len	"Mute Vol 2, No. 5 - It's Not Easy being Green: The Climate Change Issue"
+LAST	Den	"issue of Mute magazine, 2007-04"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"2"
+LAST	P433	"5"
+LAST	P577	+2007-04-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-2-no.-5-%E2%88%92-its-not-easy-being-green-climate-change-issue.html"
+LAST	P1476	en:"It's Not Easy being Green: The Climate Change Issue"
+CREATE
+LAST	Len	"Mute Vol 2, No. 6 - Living In A Bubble: Credit, Debt & Crisis"
+LAST	Den	"issue of Mute magazine, 2007-09"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"2"
+LAST	P433	"6"
+LAST	P577	+2007-09-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-2-no.-6-%E2%88%92-living-bubble-credit-debt-crisis.html"
+LAST	P1476	en:"Living In A Bubble: Credit, Debt & Crisis"
+LAST	P212	"9780955479694"
+CREATE
+LAST	Len	"Mute Vol 2, No. 7 - Show Invisibles? Migration/Data/Work"
+LAST	Den	"issue of Mute magazine, 2008-01"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"2"
+LAST	P433	"7"
+LAST	P577	+2008-01-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-2-no.-7-%E2%88%92-show-invisibles-migrationdatawork.html"
+LAST	P1476	en:"Show Invisibles? Migration/Data/Work"
+CREATE
+LAST	Len	"Mute Vol 2, No. 8 - Zero Critical Content/No Added Aesthetics"
+LAST	Den	"issue of Mute magazine, 2008-04"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"2"
+LAST	P433	"8"
+LAST	P577	+2008-04-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-2-no.-8-%E2%88%92-zero-critical-contentno-added-aesthetics.html"
+LAST	P1476	en:"Zero Critical Content/No Added Aesthetics"
+LAST	P212	"9781906496128"
+CREATE
+LAST	Len	"Mute Vol 2, No. 9 - Your Five A Day"
+LAST	Den	"issue of Mute magazine, 2008-07"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"2"
+LAST	P433	"9"
+LAST	P577	+2008-07-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-2-no.-9-%E2%88%92-your-five-day.html"
+LAST	P1476	en:"Your Five A Day"
+LAST	P212	"9781906496173"
+CREATE
+LAST	Len	"Mute Vol 2, No. 10 - We Don't Need Another Hero"
+LAST	Den	"issue of Mute magazine, 2008-10"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"2"
+LAST	P433	"10"
+LAST	P577	+2008-10-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-2-no.-10-%E2%88%92-we-dont-need-another-hero.html"
+LAST	P1476	en:"We Don't Need Another Hero"
+LAST	P212	"9781906496210"
+CREATE
+LAST	Len	"Mute Vol 2, No. 11 - Exhuming The Human"
+LAST	Den	"issue of Mute magazine, 2009-03"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"2"
+LAST	P433	"11"
+LAST	P577	+2009-03-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-2-no.-11-%E2%88%92-exhuming-human.html"
+LAST	P1476	en:"Exhuming The Human"
+CREATE
+LAST	Len	"Mute Vol 2, No. 12 - The Creative City in Ruins"
+LAST	Den	"issue of Mute magazine, 2009-06"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"2"
+LAST	P433	"12"
+LAST	P577	+2009-06-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-2-no.-12-%E2%88%92-creative-city-ruins.html"
+LAST	P1476	en:"The Creative City in Ruins"
+LAST	P212	"9781906496340"
+CREATE
+LAST	Len	"Mute Vol 2, No. 13 - Out of Time"
+LAST	Den	"issue of Mute magazine, 2009-09"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"2"
+LAST	P433	"13"
+LAST	P577	+2009-09-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-2-no.-13-%E2%88%92-out-time.html"
+LAST	P1476	en:"Out of Time"
+LAST	P212	"9781906496340"
+CREATE
+LAST	Len	"Mute Vol 2, No. 14 - Disorder/Colony/Collapse"
+LAST	Den	"issue of Mute magazine, 2009-12"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"2"
+LAST	P433	"14"
+LAST	P577	+2009-12-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-2-no.-14-%E2%88%92-disordercolonycollapse.html"
+LAST	P1476	en:"Disorder/Colony/Collapse"
+LAST	P212	"9781906496432"
+CREATE
+LAST	Len	"Mute Vol 2, No. 15 - Grey Goo Grimoire"
+LAST	Den	"issue of Mute magazine, 2010-04"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"2"
+LAST	P433	"15"
+LAST	P577	+2010-04-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-2-no.-15-%E2%88%92-grey-goo-grimoire.html"
+LAST	P1476	en:"Grey Goo Grimoire"
+LAST	P212	"9781906496456"
+CREATE
+LAST	Len	"Mute Vol 2, No. 16 - Real Life Training"
+LAST	Den	"issue of Mute magazine, 2010-06"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"2"
+LAST	P433	"16"
+LAST	P577	+2010-06-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol-2-no.-16-%E2%88%92-real-life-training.html"
+LAST	P1476	en:"Real Life Training"
+LAST	P212	"9781906496494"
+CREATE
+LAST	Len	"Mute Vol 3, No. 1 - Double Negative Feedback"
+LAST	Den	"issue of Mute magazine, 2011-06"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"3"
+LAST	P433	"1"
+LAST	P577	+2011-06-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol.-3-no.-1-double-negative-feedback.html"
+LAST	P1476	en:"Double Negative Feedback"
+LAST	P212	"9781906496012"
+CREATE
+LAST	Len	"Mute Vol 3, No. 2 - Politics my Arse"
+LAST	Den	"issue of Mute magazine, 2012-02"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"3"
+LAST	P433	"2"
+LAST	P577	+2012-02-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol.-3-no.-2-politics-my-arse.html"
+LAST	P1476	en:"Politics my Arse"
+LAST	P212	"9781906496029"
+CREATE
+LAST	Len	"Mute Vol 3, No. 3 - Becoming Impersonal"
+LAST	Den	"issue of Mute magazine, 2012-08"
+LAST	P31	Q28869365
+LAST	P1433	Q6943763
+LAST	P361	Q6943763
+LAST	P478	"3"
+LAST	P433	"3"
+LAST	P577	+2012-08-00T00:00:00Z/10
+LAST	P407	Q1860
+LAST	P953	"http://www.metamute.org/editorial/magazine/mute-vol.-3-no.-3-becoming-impersonal.html"
+LAST	P1476	en:"Becoming Impersonal"
+LAST	P212	"9781906496869"

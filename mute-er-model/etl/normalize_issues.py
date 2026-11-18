@@ -224,7 +224,7 @@ def write_csv(path: Path, fieldnames: list[str], rows: list[dict[str, object]]) 
 
 def main() -> None:
     repo_root = Path(__file__).resolve().parents[2]
-    source_path = repo_root / "mute-er-model" / "data.xlsx"
+    source_path = repo_root / "mute-er-model" / "input" / "data.xlsx"
     normalized_path = repo_root / "mute-er-model" / "output" / "issues_normalized.csv"
     qa_report_path = repo_root / "mute-er-model" / "output" / "issues_qa_report.csv"
 

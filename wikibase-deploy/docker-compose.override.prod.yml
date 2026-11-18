@@ -1,0 +1,94 @@
+# Production overrides for the Mute Wikibase Suite on corpus.metamute.org
+# (Hetzner, 178.105.222.174). Adapted from cps-deploy-1 docker-compose.override.prod.yml.
+#
+# DIFFERENCE from CPS: there is no external TLS proxy here. WBS's own Traefik
+# terminates TLS itself with Let's Encrypt (HTTP-01 challenge), so the base
+# compose traefik command (80/443, ACME, http->https redirect) is kept as is.
+# Only the routing file is replaced (single domain, path-based).
+#
+# Requirements before first start:
+#   - DNS A record corpus.metamute.org -> 178.105.222.174
+#   - ports 80 and 443 free on the host and open in the firewall
+#   - wikibase-suite/.env with WIKIBASE_PUBLIC_HOST=WDQS_PUBLIC_HOST=corpus.metamute.org
+#     (never commit it; secrets are typed on the server by a human)
+#
+# TIP for the first start: uncomment the Let's Encrypt staging caserver line in
+# the traefik command below to avoid rate limits, then remove it and recreate.
+#
+# `name:` gives every container/volume the prefix mute-wikibase-prod-.
+# Memory caps are sized for the actual server: 2 vCPU, 3.8 GB RAM + 2 GB swap
+# (checked 2026-11-18). The caps add up to ~3.9 GB, so they are a safety net,
+# not a reservation. Revisit under load or move to a larger plan.
+
+name: mute-wikibase-prod
+
+services:
+  traefik:
+    # The single-domain routing file (config/traefik-dynamic.yml) has no Host()
+    # rule, so Traefik cannot infer which domain to request a certificate for.
+    # The domain is therefore set explicitly on the websecure entrypoint
+    # (tls.domains). Compose REPLACES a `command` list, so this is the full
+    # base command from wikibase-suite/docker-compose.yml plus that one flag.
+    # To test issuance without hitting Let's Encrypt rate limits, add:
+    #   - "--certificatesresolvers.letsencrypt.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory"
+    command:
+      - "--accesslog.format=common"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--entrypoints.websecure.asdefault"
+      - "--entrypoints.websecure.http.tls.certresolver=letsencrypt"
+      - "--entrypoints.websecure.http.tls.domains[0].main=${WIKIBASE_PUBLIC_HOST}"
+      - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
+      - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
+      - "--entrypoints.web.http.redirections.entrypoint.permanent=true"
+      - "--certificatesresolvers.letsencrypt.acme.httpchallenge=true"
+      - "--certificatesresolvers.letsencrypt.acme.httpchallenge.entrypoint=web"
+      - "--certificatesresolvers.letsencrypt.acme.email=${MW_ADMIN_EMAIL}"
+      - "--certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json"
+      - "--providers.file.filename=/etc/traefik/dynamic.yml"
+      - "--log.level=INFO"
+    volumes:
+      - ../config/traefik-dynamic.yml:/etc/traefik/dynamic.yml:ro
+      - traefik-letsencrypt-data:/letsencrypt
+    mem_limit: 64m
+
+  wikibase:
+    image: wikibase/wikibase:8.2.1
+    mem_limit: 768m
+    environment:
+      MW_WG_SERVER: https://${WIKIBASE_PUBLIC_HOST}
+      WDQS_PUBLIC_ENDPOINT_URL: https://${WIKIBASE_PUBLIC_HOST}/query/proxy/sparql
+      WDQS_PUBLIC_FRONTEND_URL: https://${WIKIBASE_PUBLIC_HOST}/query/
+      QUICKSTATEMENTS_PUBLIC_URL: https://${WIKIBASE_PUBLIC_HOST}/tools/quickstatements
+
+  wikibase-jobrunner:
+    image: wikibase/wikibase:8.2.1
+    mem_limit: 256m
+
+  mysql:
+    mem_limit: 512m
+
+  elasticsearch:
+    mem_limit: 768m
+    environment:
+      OPENSEARCH_JAVA_OPTS: -Xms384m -Xmx384m
+
+  wdqs:
+    mem_limit: 1g
+
+  wdqs-updater:
+    mem_limit: 384m
+    environment:
+      WIKIBASE_CONCEPT_URI: https://${WIKIBASE_PUBLIC_HOST}
+
+  wdqs-frontend:
+    mem_limit: 64m
+    environment:
+      WDQS_PUBLIC_URL: https://${WIKIBASE_PUBLIC_HOST}/query/proxy/sparql
+      WIKIBASE_PUBLIC_URL: https://${WIKIBASE_PUBLIC_HOST}/w/api.php
+
+  quickstatements:
+    mem_limit: 128m
+    environment:
+      QUICKSTATEMENTS_PUBLIC_URL: https://${WIKIBASE_PUBLIC_HOST}/tools/quickstatements/
+      WIKIBASE_PUBLIC_URL: https://${WIKIBASE_PUBLIC_HOST}

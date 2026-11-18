@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mute-issues SYSTEM "mute-issues.dtd">
+<mute-issues version="0.1" source="output/issues_normalized.csv" generated="2026-11-18">
+  <issue id="MI001">
+    <local_id>MI001</local_id>
+    <label>Mute Vol 1, No. 0 - Can Art Survive the 20th Century?</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Can Art Survive the 20th Century?</title>
+    <volume>1</volume>
+    <number>0</number>
+    <publication_date>1994-11</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-01</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-0-can-art-survive-20th-century.html</source_url>
+    <language>en</language>
+    <sort_key>1994-11-001-v01-n00.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 0 − Can Art Survive the 20th Century? 1994 Nov, ISSN 1356-7748-01</label_raw>
+  </issue>
+  <issue id="MI002">
+    <local_id>MI002</local_id>
+    <label>Mute Vol 1, No. 1 - Homo Ludens</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Homo Ludens</title>
+    <volume>1</volume>
+    <number>1</number>
+    <publication_date>1995-05</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-02</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-1-homo-ludens.html</source_url>
+    <language>en</language>
+    <sort_key>1995-05-002-v01-n01.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 1 − Homo Ludens 1995 May, ISSN 1356-7748-02</label_raw>
+  </issue>
+  <issue id="MI003">
+    <local_id>MI003</local_id>
+    <label>Mute Vol 1, No. 2 - The Chocolate Covered Highway</label>
+    <series_title>Mute</series_title>
+    <title lang="en">The Chocolate Covered Highway</title>
+    <volume>1</volume>
+    <number>2</number>
+    <publication_date>1995-06</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-03</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-2-chocolate-covered-highway.html</source_url>
+    <language>en</language>
+    <sort_key>1995-06-003-v01-n02.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 2 − The Chocolate Covered Highway 1995 Jun, ISSN 1356-7748-03</label_raw>
+  </issue>
+  <issue id="MI004">
+    <local_id>MI004</local_id>
+    <label>Mute Vol 1, No. 3 - CODE</label>
+    <series_title>Mute</series_title>
+    <title lang="en">CODE</title>
+    <volume>1</volume>
+    <number>3</number>
+    <publication_date>1995-09</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-04</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-3-code.html</source_url>
+    <language>en</language>
+    <sort_key>1995-09-004-v01-n03.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 3 − CODE 1995 Sept, ISSN 1356-7748-04</label_raw>
+  </issue>
+  <issue id="MI005">
+    <local_id>MI005</local_id>
+    <label>Mute Vol 1, No. 4 - Analogue City</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Analogue City</title>
+    <volume>1</volume>
+    <number>4</number>
+    <publication_date>1995-12</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-05</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-4-analogue-city.html</source_url>
+    <language>en</language>
+    <sort_key>1995-12-005-v01-n04.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 4 − Analogue City 1995 Dec, ISSN 1356-7748-05</label_raw>
+  </issue>
+  <issue id="MI006">
+    <local_id>MI006</local_id>
+    <label>Mute Vol 1, No. 5</label>
+    <series_title>Mute</series_title>
+    <volume>1</volume>
+    <number>5</number>
+    <publication_date>1996-06</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-06</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-5.html</source_url>
+    <language>en</language>
+    <sort_key>1996-06-006-v01-n05.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 5 1996 Jun, ISSN 1356-7748-06</label_raw>
+  </issue>
+  <issue id="MI007">
+    <local_id>MI007</local_id>
+    <label>Mute Vol 1, No. 6</label>
+    <series_title>Mute</series_title>
+    <volume>1</volume>
+    <number>6</number>
+    <publication_date>1996-09</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-07</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-6.html</source_url>
+    <language>en</language>
+    <sort_key>1996-09-007-v01-n06.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 6 1996 Sept, ISSN 1356-7748-07</label_raw>
+  </issue>
+  <issue id="MI008">
+    <local_id>MI008</local_id>
+    <label>Mute Vol 1, No. 7</label>
+    <series_title>Mute</series_title>
+    <volume>1</volume>
+    <number>7</number>
+    <publication_date>1996-11</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-08</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-7.html</source_url>
+    <language>en</language>
+    <sort_key>1996-11-008-v01-n07.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 7 1996 Nov, ISSN 1356-7748-08</label_raw>
+  </issue>
+  <issue id="MI009">
+    <local_id>MI009</local_id>
+    <label>Mute Vol 1, No. 8 - Cyberfeminism</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Cyberfeminism</title>
+    <volume>1</volume>
+    <number>8</number>
+    <publication_date>1997-08</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-X8</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-8-%E2%80%93-cyberfeminism.html</source_url>
+    <language>en</language>
+    <edition_note>second edition</edition_note>
+    <sort_key>1997-08-009-v01-n08.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 8 – Cyberfeminism 1997 Aug, ISSN 1356-7748-X8 (second edition)</label_raw>
+  </issue>
+  <issue id="MI010">
+    <local_id>MI010</local_id>
+    <label>Mute Vol 1, No. 9</label>
+    <series_title>Mute</series_title>
+    <volume>1</volume>
+    <number>9</number>
+    <publication_date>1997-09</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-09</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-9-0.html</source_url>
+    <language>en</language>
+    <sort_key>1997-09-010-v01-n09.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 9 1997 Sept, ISSN 1356-7748-09</label_raw>
+  </issue>
+  <issue id="MI011">
+    <local_id>MI011</local_id>
+    <label>Mute Vol 1, No. 10 - Mongrel Culture</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Mongrel Culture</title>
+    <volume>1</volume>
+    <number>10</number>
+    <publication_date>1998-04</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-10</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.10-%E2%80%93-mongrel-culture.html</source_url>
+    <language>en</language>
+    <sort_key>1998-04-011-v01-n10.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No.10 – Mongrel Culture 1998 Apr, ISSN 1356-7748-10</label_raw>
+  </issue>
+  <issue id="MI012">
+    <local_id>MI012</local_id>
+    <label>Mute Vol 1, No. 11 - Vote Now! Net. Sex, Net. Money, Net. Work</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Vote Now! Net. Sex, Net. Money, Net. Work</title>
+    <volume>1</volume>
+    <number>11</number>
+    <publication_date>1998-08</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-11</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-11-%E2%80%93-vote-now-net.-sex-net.-money-net.-work.html</source_url>
+    <language>en</language>
+    <sort_key>1998-08-012-v01-n11.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 11 – Vote Now! Net. Sex, Net. Money, Net. Work 1998 Aug, ISSN 1356-7748-11</label_raw>
+  </issue>
+  <issue id="MI013">
+    <local_id>MI013</local_id>
+    <label>Mute Vol 1, No. 12 - Bringing It All Back Home</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Bringing It All Back Home</title>
+    <volume>1</volume>
+    <number>12</number>
+    <publication_date>1999-01</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-12</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-12-%E2%80%93-bringing-it-all-back-home.html</source_url>
+    <language>en</language>
+    <sort_key>1999-01-013-v01-n12.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 12 – Bringing It All Back Home 1999 Jan, ISSN 1356-7748-12</label_raw>
+  </issue>
+  <issue id="MI014">
+    <local_id>MI014</local_id>
+    <label>Mute Vol 1, No. 13 - Next Five Minutes: Tactical Media</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Next Five Minutes: Tactical Media</title>
+    <volume>1</volume>
+    <number>13</number>
+    <publication_date>1999-06</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-13</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-13-%E2%80%93-next-five-minutes-tactical-media.html</source_url>
+    <language>en</language>
+    <sort_key>1999-06-014-v01-n13.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 13 – Next Five Minutes: Tactical Media 1999 Jun, ISSN 1356-7748-13</label_raw>
+  </issue>
+  <issue id="MI015">
+    <local_id>MI015</local_id>
+    <label>Mute Vol 1, No. 14 - Space: Intergalactic Overdrive</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Space: Intergalactic Overdrive</title>
+    <volume>1</volume>
+    <number>14</number>
+    <publication_date>1999-09</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-14</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-14-%E2%80%93-space-intergalactic-overdrive.html</source_url>
+    <language>en</language>
+    <sort_key>1999-09-015-v01-n14.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 14 – Space: Intergalactic Overdrive 1999 Sept, ISSN 1356-7748-14</label_raw>
+  </issue>
+  <issue id="MI016">
+    <local_id>MI016</local_id>
+    <label>Mute Vol 1, No. 15 - Y2K Positive: Bring Your Own Media</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Y2K Positive: Bring Your Own Media</title>
+    <volume>1</volume>
+    <number>15</number>
+    <publication_date>2000-01</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-15</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-15-%E2%80%93-y2k-positive-bring-your-own-media.html</source_url>
+    <language>en</language>
+    <sort_key>2000-01-016-v01-n15.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 15 – Y2K Positive: Bring Your Own Media 2000 Jan, ISSN 1356-7748-15</label_raw>
+  </issue>
+  <issue id="MI017">
+    <local_id>MI017</local_id>
+    <label>Mute Vol 1, No. 16 - Art Wars</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Art Wars</title>
+    <volume>1</volume>
+    <number>16</number>
+    <publication_date>2000-05</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-16</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-16-%E2%80%93-art-wars.html</source_url>
+    <language>en</language>
+    <sort_key>2000-05-017-v01-n16.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 16 – Art Wars 2000 May, ISSN 1356-7748-16</label_raw>
+  </issue>
+  <issue id="MI018">
+    <local_id>MI018</local_id>
+    <label>Mute Vol 1, No. 17 - Europe Undone</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Europe Undone</title>
+    <volume>1</volume>
+    <number>17</number>
+    <publication_date>2000-06</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-17</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-17-%E2%80%93-europe-undone.html</source_url>
+    <language>en</language>
+    <sort_key>2000-06-018-v01-n17.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 17 – Europe Undone 2000 Jun, ISSN 1356-7748-17</label_raw>
+  </issue>
+  <issue id="MI019">
+    <local_id>MI019</local_id>
+    <label>Mute Vol 1, No. 18 - I Am The Network</label>
+    <series_title>Mute</series_title>
+    <title lang="en">I Am The Network</title>
+    <volume>1</volume>
+    <number>18</number>
+    <publication_date>2000-11</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-18</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-18-%E2%80%93-i-am-network.html</source_url>
+    <language>en</language>
+    <sort_key>2000-11-019-v01-n18.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 18 – I Am The Network 2000 Nov, ISSN 1356-7748-18</label_raw>
+  </issue>
+  <issue id="MI020">
+    <local_id>MI020</local_id>
+    <label>Mute Vol 1, No. 19 - Global Systems Meltdown</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Global Systems Meltdown</title>
+    <volume>1</volume>
+    <number>19</number>
+    <publication_date>2001-04</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-19</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-19-%E2%80%93-global-systems-meltdown.html</source_url>
+    <language>en</language>
+    <sort_key>2001-04-020-v01-n19.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 19 – Global Systems Meltdown 2001 Apr, ISSN 1356-7748-19</label_raw>
+  </issue>
+  <issue id="MI021">
+    <local_id>MI021</local_id>
+    <label>Mute Vol 1, No. 20 - Digital Commons?</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Digital Commons?</title>
+    <volume>1</volume>
+    <number>20</number>
+    <publication_date>2001-07</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-20</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-20-%E2%80%93-digital-commons.html</source_url>
+    <language>en</language>
+    <sort_key>2001-07-021-v01-n20.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 20 – Digital Commons? 2001 Jul, ISSN 1356-7748-20</label_raw>
+  </issue>
+  <issue id="MI022">
+    <local_id>MI022</local_id>
+    <label>Mute Vol 1, No. 21 - Total Paranoia</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Total Paranoia</title>
+    <volume>1</volume>
+    <number>21</number>
+    <publication_date>2001-09</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-21</issn_issue_token>
+    <isbn_raw>978-1-906496-60-9</isbn_raw>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-21-%E2%80%93-total-paranoia-metamap.html</source_url>
+    <language>en</language>
+    <insert_note>Inserts; The Metamute of Surveillance and Security, 2001-09, ISBN 978-1-906496-60-9. Fall Out audio CD</insert_note>
+    <sort_key>2001-09-022-v01-n21.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 21 – Total Paranoia 2001 Sept, ISSN 1356-7748-21. Inserts; The Metamute of Surveillance and Security, 2001-09, ISBN 978-1-906496-60-9. Fall Out audio CD.</label_raw>
+  </issue>
+  <issue id="MI023">
+    <local_id>MI023</local_id>
+    <label>Mute Vol 1, No. 22 - The Art Issue</label>
+    <series_title>Mute</series_title>
+    <title lang="en">The Art Issue</title>
+    <volume>1</volume>
+    <number>22</number>
+    <publication_date>2001-12</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-22</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-22-%E2%80%93-art-issue.html</source_url>
+    <language>en</language>
+    <insert_note>Insert: CD Untitled Game by JODI</insert_note>
+    <sort_key>2001-12-023-v01-n22.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 22 – The Art Issue 2001 Dec, ISSN 1356-7748-22. Insert: CD Untitled Game by JODI.</label_raw>
+  </issue>
+  <issue id="MI024">
+    <local_id>MI024</local_id>
+    <label>Mute Vol 1, No. 23 - Info-War V.2.0</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Info-War V.2.0</title>
+    <volume>1</volume>
+    <number>23</number>
+    <publication_date>2002-03</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-23</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-23-%E2%80%93-info-war-v.2.0.html</source_url>
+    <language>en</language>
+    <sort_key>2002-03-024-v01-n23.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 23 – Info-War V.2.0 2002 Mar, ISSN 1356-7748-23</label_raw>
+  </issue>
+  <issue id="MI025">
+    <local_id>MI025</local_id>
+    <label>Mute Vol 1, No. 24 - Beach or Border?</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Beach or Border?</title>
+    <volume>1</volume>
+    <number>24</number>
+    <publication_date>2002-05</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-24</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-24-%E2%80%93-beach-or-border.html</source_url>
+    <language>en</language>
+    <sort_key>2002-05-025-v01-n24.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 24 – Beach or Border? 2002 May, ISSN 1356-7748-24</label_raw>
+  </issue>
+  <issue id="MI026">
+    <local_id>MI026</local_id>
+    <label>Mute Vol 1, No. 25 - (Winter/Spring 2003)</label>
+    <series_title>Mute</series_title>
+    <title lang="en">(Winter/Spring 2003)</title>
+    <volume>1</volume>
+    <number>25</number>
+    <publication_date>2002-11</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-25</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-25-winterspring-2003.html</source_url>
+    <language>en</language>
+    <sort_key>2002-11-026-v01-n25.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 25 − (Winter/Spring 2003) 2002 Nov, ISSN 1356-7748-25</label_raw>
+  </issue>
+  <issue id="MI027">
+    <local_id>MI027</local_id>
+    <label>Mute Vol 1, No. 26 - (Summer/Autumn 2003)</label>
+    <series_title>Mute</series_title>
+    <title lang="en">(Summer/Autumn 2003)</title>
+    <volume>1</volume>
+    <number>26</number>
+    <publication_date>2003-06</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-26</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-26-summerautumn-2003.html</source_url>
+    <language>en</language>
+    <sort_key>2003-06-027-v01-n26.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 26 − (Summer/Autumn 2003) 2003 Jun, ISSN 1356-7748-26</label_raw>
+  </issue>
+  <issue id="MI028">
+    <local_id>MI028</local_id>
+    <label>Mute Vol 1, No. 27 - (Winter/Spring 2004)</label>
+    <series_title>Mute</series_title>
+    <title lang="en">(Winter/Spring 2004)</title>
+    <volume>1</volume>
+    <number>27</number>
+    <publication_date>2003-11</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-27</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-27-winterspring-2004.html</source_url>
+    <language>en</language>
+    <sort_key>2003-11-028-v01-n27.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 27 − (Winter/Spring 2004) 2003 Nov, ISSN 1356-7748-27</label_raw>
+  </issue>
+  <issue id="MI029">
+    <local_id>MI029</local_id>
+    <label>Mute Vol 1, No. 28 - (Summer/Autumn 2004)</label>
+    <series_title>Mute</series_title>
+    <title lang="en">(Summer/Autumn 2004)</title>
+    <volume>1</volume>
+    <number>28</number>
+    <publication_date>2004-06</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-28</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-28-summerautumn-2004.html</source_url>
+    <language>en</language>
+    <insert_note>Insert: INCT/t0 booklet</insert_note>
+    <sort_key>2004-06-029-v01-n28.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 28 − (Summer/Autumn 2004) 2004 Jun, ISSN 1356-7748-28. Insert: INCT/t0 booklet.</label_raw>
+  </issue>
+  <issue id="MI030">
+    <local_id>MI030</local_id>
+    <label>Mute Vol 1, No. 29 - The Precarious Issue</label>
+    <series_title>Mute</series_title>
+    <title lang="en">The Precarious Issue</title>
+    <volume>1</volume>
+    <number>29</number>
+    <publication_date>2005-02</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-29</issn_issue_token>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-1-no.-29-%E2%80%93-precarious-issue.html</source_url>
+    <language>en</language>
+    <edition_note>second edition</edition_note>
+    <sort_key>2005-02-030-v01-n29.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 1, No. 29 − The Precarious Issue 2005 Feb, ISSN 1356-7748-29 (second edition)</label_raw>
+  </issue>
+  <issue id="MI031">
+    <local_id>MI031</local_id>
+    <label>Mute Vol 2, No. 0 - Precarious Reader</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Precarious Reader</title>
+    <volume>2</volume>
+    <number>0</number>
+    <publication_date>2005-09</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-200</issn_issue_token>
+    <isbn13>9780955066405</isbn13>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-2-no.-0-%E2%88%92-precarious-reader.html</source_url>
+    <language>en</language>
+    <sort_key>2005-09-031-v02-n00.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 2, No. 0 − Precarious Reader 2005 Sept, ISSN 1356-7748-200 &amp; ISBN 9780955066405</label_raw>
+  </issue>
+  <issue id="MI032">
+    <local_id>MI032</local_id>
+    <label>Mute Vol 2, No. 1 - Underneath The Knowledge Commons</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Underneath The Knowledge Commons</title>
+    <volume>2</volume>
+    <number>1</number>
+    <publication_date>2005-12</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-201</issn_issue_token>
+    <isbn_raw>9780955066417</isbn_raw>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-2-no.-1-%E2%88%92-underneath-knowledge-commons.html</source_url>
+    <language>en</language>
+    <sort_key>2005-12-032-v02-n01.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 2, No. 1 − Underneath The Knowledge Commons 2005 Dec, ISSN 1356-7748-201 &amp; ISBN 9780955066417</label_raw>
+  </issue>
+  <issue id="MI033">
+    <local_id>MI033</local_id>
+    <label>Mute Vol 2, No. 2 - Dis-Integrating Multiculturalism</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Dis-Integrating Multiculturalism</title>
+    <volume>2</volume>
+    <number>2</number>
+    <publication_date>2006-06</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-202</issn_issue_token>
+    <isbn_raw>9780955066425</isbn_raw>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-2-no.-2-%E2%88%92-dis-integrating-multiculturalism.html</source_url>
+    <language>en</language>
+    <sort_key>2006-06-033-v02-n02.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 2, No. 2 − Dis-Integrating Multiculturalism 2006 Jun, ISSN 1356-7748-202 &amp; ISBN 9780955066425</label_raw>
+  </issue>
+  <issue id="MI034">
+    <local_id>MI034</local_id>
+    <label>Mute Vol 2, No. 3 - Naked Cities: Struggle in the Global Slums</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Naked Cities: Struggle in the Global Slums</title>
+    <volume>2</volume>
+    <number>3</number>
+    <publication_date>2006-10</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-203</issn_issue_token>
+    <isbn_raw>978190649633</isbn_raw>
+    <source_url>https://www.metamute.org/editorial/magazine/mute-vol-2-no.-3--naked-cities-struggle-global-slums.html</source_url>
+    <language>en</language>
+    <sort_key>2006-10-034-v02-n03.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 2, No. 3 − Naked Cities: Struggle in the Global Slums 2006 Oct, ISSN 1356-7748-203, ISBN 978190649633</label_raw>
+  </issue>
+  <issue id="MI035">
+    <local_id>MI035</local_id>
+    <label>Mute Vol 2, No. 4 - Web 2.0 Man's Best Friendster</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Web 2.0 Man's Best Friendster</title>
+    <volume>2</volume>
+    <number>4</number>
+    <publication_date>2007-01</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-204</issn_issue_token>
+    <isbn_raw>978190649614</isbn_raw>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-2-no.-4-%E2%88%92-web-2.0-mans-best-friendster.html</source_url>
+    <language>en</language>
+    <sort_key>2007-01-035-v02-n04.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 2, No. 4 − Web 2.0 Man's Best Friendster 2007 Jan, ISSN 1356-7748-204 &amp; ISBN 978190649614</label_raw>
+  </issue>
+  <issue id="MI036">
+    <local_id>MI036</local_id>
+    <label>Mute Vol 2, No. 5 - It's Not Easy being Green: The Climate Change Issue</label>
+    <series_title>Mute</series_title>
+    <title lang="en">It's Not Easy being Green: The Climate Change Issue</title>
+    <volume>2</volume>
+    <number>5</number>
+    <publication_date>2007-04</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-205</issn_issue_token>
+    <isbn_raw>978190649614</isbn_raw>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-2-no.-5-%E2%88%92-its-not-easy-being-green-climate-change-issue.html</source_url>
+    <language>en</language>
+    <sort_key>2007-04-036-v02-n05.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 2, No. 5 − It's Not Easy being Green: The Climate Change Issue 2007 Apr, ISSN 1356-7748-205 &amp; ISBN 978190649614</label_raw>
+  </issue>
+  <issue id="MI037">
+    <local_id>MI037</local_id>
+    <label>Mute Vol 2, No. 6 - Living In A Bubble: Credit, Debt &amp; Crisis</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Living In A Bubble: Credit, Debt &amp; Crisis</title>
+    <volume>2</volume>
+    <number>6</number>
+    <publication_date>2007-09</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-206</issn_issue_token>
+    <isbn13>9780955479694</isbn13>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-2-no.-6-%E2%88%92-living-bubble-credit-debt-crisis.html</source_url>
+    <language>en</language>
+    <sort_key>2007-09-037-v02-n06.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 2, No. 6 − Living In A Bubble: Credit, Debt &amp; Crisis 2007 Sept, ISSN 1356-7748-206 &amp; ISBN 9780955479694</label_raw>
+  </issue>
+  <issue id="MI038">
+    <local_id>MI038</local_id>
+    <label>Mute Vol 2, No. 7 - Show Invisibles? Migration/Data/Work</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Show Invisibles? Migration/Data/Work</title>
+    <volume>2</volume>
+    <number>7</number>
+    <publication_date>2008-01</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-207</issn_issue_token>
+    <isbn_raw>978190649694</isbn_raw>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-2-no.-7-%E2%88%92-show-invisibles-migrationdatawork.html</source_url>
+    <language>en</language>
+    <sort_key>2008-01-038-v02-n07.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 2, No. 7 − Show Invisibles? Migration/Data/Work 2008 Jan, ISSN 1356-7748-207 &amp; ISBN 978190649694</label_raw>
+  </issue>
+  <issue id="MI039">
+    <local_id>MI039</local_id>
+    <label>Mute Vol 2, No. 8 - Zero Critical Content/No Added Aesthetics</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Zero Critical Content/No Added Aesthetics</title>
+    <volume>2</volume>
+    <number>8</number>
+    <publication_date>2008-04</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-208</issn_issue_token>
+    <isbn13>9781906496128</isbn13>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-2-no.-8-%E2%88%92-zero-critical-contentno-added-aesthetics.html</source_url>
+    <language>en</language>
+    <sort_key>2008-04-039-v02-n08.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 2, No. 8 − Zero Critical Content/No Added Aesthetics 2008 Apr, ISSN 1356-7748-208 &amp; ISBN 9781906496128</label_raw>
+  </issue>
+  <issue id="MI040">
+    <local_id>MI040</local_id>
+    <label>Mute Vol 2, No. 9 - Your Five A Day</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Your Five A Day</title>
+    <volume>2</volume>
+    <number>9</number>
+    <publication_date>2008-07</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-209</issn_issue_token>
+    <isbn13>9781906496173</isbn13>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-2-no.-9-%E2%88%92-your-five-day.html</source_url>
+    <language>en</language>
+    <sort_key>2008-07-040-v02-n09.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 2, No. 9 − Your Five A Day 2008 Jul, ISSN 1356-7748-209 &amp; ISBN 9781906496173</label_raw>
+  </issue>
+  <issue id="MI041">
+    <local_id>MI041</local_id>
+    <label>Mute Vol 2, No. 10 - We Don't Need Another Hero</label>
+    <series_title>Mute</series_title>
+    <title lang="en">We Don't Need Another Hero</title>
+    <volume>2</volume>
+    <number>10</number>
+    <publication_date>2008-10</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-210</issn_issue_token>
+    <isbn13>9781906496210</isbn13>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-2-no.-10-%E2%88%92-we-dont-need-another-hero.html</source_url>
+    <language>en</language>
+    <sort_key>2008-10-041-v02-n10.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 2, No. 10 − We Don't Need Another Hero 2008 Oct, ISSN 1356-7748-210 &amp; ISBN 9781906496210</label_raw>
+  </issue>
+  <issue id="MI042">
+    <local_id>MI042</local_id>
+    <label>Mute Vol 2, No. 11 - Exhuming The Human</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Exhuming The Human</title>
+    <volume>2</volume>
+    <number>11</number>
+    <publication_date>2009-03</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-211</issn_issue_token>
+    <isbn_raw>978190649625</isbn_raw>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-2-no.-11-%E2%88%92-exhuming-human.html</source_url>
+    <language>en</language>
+    <sort_key>2009-03-042-v02-n11.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 2, No. 11 − Exhuming The Human 2009 Mar, ISSN 1356-7748-211 &amp; ISBN 978190649625</label_raw>
+  </issue>
+  <issue id="MI043">
+    <local_id>MI043</local_id>
+    <label>Mute Vol 2, No. 12 - The Creative City in Ruins</label>
+    <series_title>Mute</series_title>
+    <title lang="en">The Creative City in Ruins</title>
+    <volume>2</volume>
+    <number>12</number>
+    <publication_date>2009-06</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-212</issn_issue_token>
+    <isbn13>9781906496340</isbn13>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-2-no.-12-%E2%88%92-creative-city-ruins.html</source_url>
+    <language>en</language>
+    <sort_key>2009-06-043-v02-n12.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 2, No. 12 − The Creative City in Ruins 2009 Jun, ISSN 1356-7748-212 &amp; ISBN 9781906496340</label_raw>
+  </issue>
+  <issue id="MI044">
+    <local_id>MI044</local_id>
+    <label>Mute Vol 2, No. 13 - Out of Time</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Out of Time</title>
+    <volume>2</volume>
+    <number>13</number>
+    <publication_date>2009-09</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-213</issn_issue_token>
+    <isbn13>9781906496340</isbn13>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-2-no.-13-%E2%88%92-out-time.html</source_url>
+    <language>en</language>
+    <sort_key>2009-09-044-v02-n13.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 2, No. 13 − Out of Time 2009 Sept, ISSN 1356-7748-213 &amp; ISBN 9781906496340</label_raw>
+  </issue>
+  <issue id="MI045">
+    <local_id>MI045</local_id>
+    <label>Mute Vol 2, No. 14 - Disorder/Colony/Collapse</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Disorder/Colony/Collapse</title>
+    <volume>2</volume>
+    <number>14</number>
+    <publication_date>2009-12</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-214</issn_issue_token>
+    <isbn13>9781906496432</isbn13>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-2-no.-14-%E2%88%92-disordercolonycollapse.html</source_url>
+    <language>en</language>
+    <sort_key>2009-12-045-v02-n14.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 2, No. 14 − Disorder/Colony/Collapse 2009 Dec, ISSN 1356-7748-214 &amp; ISBN 9781906496432</label_raw>
+  </issue>
+  <issue id="MI046">
+    <local_id>MI046</local_id>
+    <label>Mute Vol 2, No. 15 - Grey Goo Grimoire</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Grey Goo Grimoire</title>
+    <volume>2</volume>
+    <number>15</number>
+    <publication_date>2010-04</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-215</issn_issue_token>
+    <isbn13>9781906496456</isbn13>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-2-no.-15-%E2%88%92-grey-goo-grimoire.html</source_url>
+    <language>en</language>
+    <sort_key>2010-04-046-v02-n15.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 2, No. 15 − Grey Goo Grimoire 2010 Apr, ISSN 1356-7748-215 &amp; ISBN 9781906496456</label_raw>
+  </issue>
+  <issue id="MI047">
+    <local_id>MI047</local_id>
+    <label>Mute Vol 2, No. 16 - Real Life Training</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Real Life Training</title>
+    <volume>2</volume>
+    <number>16</number>
+    <publication_date>2010-06</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-216</issn_issue_token>
+    <isbn13>9781906496494</isbn13>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol-2-no.-16-%E2%88%92-real-life-training.html</source_url>
+    <language>en</language>
+    <sort_key>2010-06-047-v02-n16.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol 2, No. 16 − Real Life Training 2010 Jun, ISSN 1356-7748-216 &amp; ISBN 9781906496494</label_raw>
+  </issue>
+  <issue id="MI048">
+    <local_id>MI048</local_id>
+    <label>Mute Vol 3, No. 1 - Double Negative Feedback</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Double Negative Feedback</title>
+    <volume>3</volume>
+    <number>1</number>
+    <publication_date>2011-06</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-301</issn_issue_token>
+    <isbn13>9781906496012</isbn13>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol.-3-no.-1-double-negative-feedback.html</source_url>
+    <language>en</language>
+    <sort_key>2011-06-048-v03-n01.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol. 3, No. 1 − Double Negative Feedback 2011 Jun, ISSN 1356-7748-301 &amp; ISBN 9781906496012</label_raw>
+  </issue>
+  <issue id="MI049">
+    <local_id>MI049</local_id>
+    <label>Mute Vol 3, No. 2 - Politics my Arse</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Politics my Arse</title>
+    <volume>3</volume>
+    <number>2</number>
+    <publication_date>2012-02</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-302</issn_issue_token>
+    <isbn13>9781906496029</isbn13>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol.-3-no.-2-politics-my-arse.html</source_url>
+    <language>en</language>
+    <sort_key>2012-02-049-v03-n02.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol. 3, No. 2 − Politics my Arse 2012 Feb, ISSN 1356-7748-302 &amp; ISBN 9781906496029</label_raw>
+  </issue>
+  <issue id="MI050">
+    <local_id>MI050</local_id>
+    <label>Mute Vol 3, No. 3 - Becoming Impersonal</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Becoming Impersonal</title>
+    <volume>3</volume>
+    <number>3</number>
+    <publication_date>2012-08</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-303</issn_issue_token>
+    <isbn13>9781906496869</isbn13>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol.-3-no.-3-becoming-impersonal.html</source_url>
+    <language>en</language>
+    <sort_key>2012-08-050-v03-n03.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol. 3, No. 3 − Becoming Impersonal 2012 Aug, ISSN 1356-7748-303 &amp; ISBN 9781906496869</label_raw>
+  </issue>
+  <issue id="MI051">
+    <local_id>MI051</local_id>
+    <label>Mute Vol 3, No. 4 - Slave to the Algorithm</label>
+    <series_title>Mute</series_title>
+    <title lang="en">Slave to the Algorithm</title>
+    <volume>3</volume>
+    <number>4</number>
+    <publication_date>2013-04</publication_date>
+    <issn_print>1356-7748</issn_print>
+    <issn_issue_token>1356-7748-304</issn_issue_token>
+    <isbn13>9781906496043</isbn13>
+    <source_url>http://www.metamute.org/editorial/magazine/mute-vol.-3-no.-4-slave-to-algorithm.html</source_url>
+    <language>en</language>
+    <sort_key>2013-04-051-v03-n04.0</sort_key>
+    <qa_status>draft</qa_status>
+    <label_raw>Mute Vol. 3, No. 4 − Slave to the Algorithm 2013 Apr, ISSN 1356-7748-304 &amp; ISBN 9781906496043</label_raw>
+  </issue>
+</mute-issues>

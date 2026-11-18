@@ -9,11 +9,11 @@ Image: Mute’s first call for contributions 1994. https://commons.wikimedia.org
 
 Corpus Mute is a _cataloguing project_ for making the *[Mute](https://www.metamute.org/)* magazine archive using modern open scholarship workflows. The goals are to catalogue, explore, connect, and distribute Mute's writing and projects. The workflows use software tooling from the following areas — linked open data [(Wikidata)](https://www.wikidata.org/wiki/Q115486583), knowledge graphs, open science infrastructures, and digital sovereign infrastructures. The results of the Corpus Mute endeavour will be accessible from well-established open scholarship platforms, including — [OpenAlex](https://openalex.org/works?page=1&filter=title_and_abstract.search:mute+magazine), [Wikidata](https://reasonator.toolforge.org/?&lang=mul&q=6943763), [Zenodo](https://zenodo.org/communities/mute), [Archive.org](https://archive.org/details/@metamute?sort=title), [Library Genesis](https://en.wikipedia.org/wiki/Library_Genesis) and many more.
 
-The project aims to profile and give recognition to all who helped create _Mute_ and generously gave their ideas, energy, and hard work: The editors and staff; contributors; those in our network — individuals, projects, and organisations; and to our supporters and funders. 
+The project aims to profile and give recognition to all who helped create _Mute_ and generously gave their ideas, energy, and hard work: The editors and staff; contributors; those in our network — individuals, projects, and organisations; and to our supporters and funders.
 
 Mute is actively looking for supporters and partners. Please reach out if you're interested in a conversation about the archiving project.  
 
-Coordinator: Simon Worthington, co-founder Mute simon@metamute.org 
+Coordinator: Simon Worthington, co-founder Mute simon@metamute.org
 
 ## Activities
 

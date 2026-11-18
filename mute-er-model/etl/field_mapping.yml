@@ -1,5 +1,5 @@
 source:
-  workbook: mute-er-model/data.xlsx
+  workbook: mute-er-model/input/data.xlsx
   sheet: Sheet1
   columns:
     A: Inventory number

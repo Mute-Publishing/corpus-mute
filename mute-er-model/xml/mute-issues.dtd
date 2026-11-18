@@ -1,0 +1,85 @@
+<!-- ================================================================== -->
+<!-- Mute magazine Issues - Document Type Definition (v0.1, DRAFT)       -->
+<!--                                                                      -->
+<!-- Storage format for the Phase 1 ER model (see ../Mute_ER_model.md).  -->
+<!-- One <issue> element = one Wikibase item of class "Issue".           -->
+<!-- Generated from ../output/issues_normalized.csv by                    -->
+<!-- ../etl/csv_to_xml.py and loaded by ../etl/upload_to_wikibase.py.     -->
+<!--                                                                      -->
+<!-- Element names match the ER attribute names one-to-one.              -->
+<!-- ================================================================== -->
+
+<!-- Root: all issues. -->
+<!ELEMENT mute-issues (issue+)>
+<!ATTLIST mute-issues
+    version    CDATA #REQUIRED
+    source     CDATA #IMPLIED
+    generated  CDATA #IMPLIED>
+
+<!--
+  issue : one Mute issue.
+  @id   : local key, same as <local_id> (e.g. MI001). Unique in the file.
+-->
+<!ELEMENT issue (local_id, label, series_title, title?, volume, number,
+                 publication_date, issn_print, issn_issue_token,
+                 isbn13?, isbn_raw?, source_url, language,
+                 edition_note?, insert_note?, sort_key, qa_status, label_raw)>
+<!ATTLIST issue
+    id  ID  #REQUIRED>
+
+<!-- Stable local identifier, MI + zero padded inventory number. -->
+<!ELEMENT local_id (#PCDATA)>
+
+<!-- Item label, e.g. "Mute Vol 1, No. 1 - Homo Ludens". -->
+<!ELEMENT label (#PCDATA)>
+
+<!-- Literal series name ("Mute"). Wikidata: P1433 -> Q6943763. -->
+<!ELEMENT series_title (#PCDATA)>
+
+<!-- Thematic issue title. Absent when the issue has none. Wikidata P1476. -->
+<!ELEMENT title (#PCDATA)>
+<!ATTLIST title
+    lang  CDATA  "en">
+
+<!-- Volume number as string. Wikidata P478. -->
+<!ELEMENT volume (#PCDATA)>
+
+<!-- Issue number within the volume, as string ("0" for pilot/reader). Wikidata P433. -->
+<!ELEMENT number (#PCDATA)>
+
+<!-- Publication date, YYYY-MM (month precision). Wikidata P577. -->
+<!ELEMENT publication_date (#PCDATA)>
+
+<!-- Series ISSN, 1356-7748. Wikidata P236. -->
+<!ELEMENT issn_print (#PCDATA)>
+
+<!-- Per-issue token (e.g. 1356-7748-01). Local convention, unique. -->
+<!ELEMENT issn_issue_token (#PCDATA)>
+
+<!-- Checksum-valid ISBN-13, digits only. Wikidata P212. Optional. -->
+<!ELEMENT isbn13 (#PCDATA)>
+
+<!-- Original ISBN string from the source, kept when invalid or when the
+     ISBN belongs to an insert rather than the issue. -->
+<!ELEMENT isbn_raw (#PCDATA)>
+
+<!-- metamute.org page of the issue. Wikidata P953. -->
+<!ELEMENT source_url (#PCDATA)>
+
+<!-- Language code (en). Mapped to a language item at import. Wikidata P407. -->
+<!ELEMENT language (#PCDATA)>
+
+<!-- e.g. "second edition". -->
+<!ELEMENT edition_note (#PCDATA)>
+
+<!-- Inserts, CDs, booklets mentioned in the source label. -->
+<!ELEMENT insert_note (#PCDATA)>
+
+<!-- Combined chronological + printed order key. -->
+<!ELEMENT sort_key (#PCDATA)>
+
+<!-- draft | reviewed. "draft" while any qa_needs_* flag is yes. -->
+<!ELEMENT qa_status (#PCDATA)>
+
+<!-- Original issue string from the spreadsheet (provenance). -->
+<!ELEMENT label_raw (#PCDATA)>

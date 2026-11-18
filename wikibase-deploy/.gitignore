@@ -1,0 +1,10 @@
+# Secrets - never commit
+.env
+*.env
+!*.env.example
+wikibase-suite/.env
+
+# Bootstrap output with local/prod entity IDs and logs
+bootstrap.*.json
+upload_log.*.json
+backups/

@@ -1,10 +1,14 @@
 # Mute ER Model: Issue ETL
 
+- Extract, Transform, Load (ETL) AKAK normalisation
+
 This folder contains the first-pass ETL pipeline for normalizing issue metadata from the spreadsheet into a review-ready CSV before Wikidata upload drafting.
+
+The process is 'bottom-up' first, which means sort the data we have and come up with a minimal set of fields, second is 'top-down' select a schema(s) and see what will be needed to satisfy the schemas needs.
 
 ## Source
 
-- Workbook: `mute-er-model/data.xlsx`
+- Workbook: `mute-er-model/input/data.xlsx`
 - Sheet: `Sheet1`
 - Expected source columns:
   - `Inventory number`

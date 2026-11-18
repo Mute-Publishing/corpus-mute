@@ -1,0 +1,101 @@
+# Traefik dynamic configuration for the Mute Wikibase (single public domain,
+# path-based routing). Adapted from cps-deploy-1 config/traefik-dynamic.yml.
+#
+# Mounted in place of the submodule's own copy via docker-compose.override.*.yml,
+# so the vendored wikibase-suite/ submodule stays unmodified.
+#
+# WIKIBASE_PUBLIC_HOST and WDQS_PUBLIC_HOST are intentionally the SAME value, so
+# routers use path prefixes only (no Host() match) with explicit priorities.
+#
+#   /                      -> wikibase
+#   /query/proxy/sparql    -> wdqs        (rewritten to /bigdata/namespace/wdq/sparql)
+#   /query/                -> wdqs-frontend
+#   /tools/quickstatements -> quickstatements (prefix stripped)
+
+http:
+  services:
+    wikibase:
+      loadBalancer:
+        servers:
+          - url: "http://wikibase:80"
+
+    wdqs:
+      loadBalancer:
+        servers:
+          - url: "http://wdqs:9999"
+
+    wdqs-frontend:
+      loadBalancer:
+        servers:
+          - url: "http://wdqs-frontend:80"
+
+    quickstatements:
+      loadBalancer:
+        servers:
+          - url: "http://quickstatements:80"
+
+  routers:
+    wdqs-router:
+      rule: 'PathPrefix(`/query/proxy/sparql`) && (Method(`GET`) || Method(`OPTIONS`) || Method(`POST`))'
+      service: wdqs
+      priority: 100
+      middlewares: [ sparql-strip-prefix, wdqs-prefix, wdqs-headers, wdqs-cors-headers, wdqs-rate-limit ]
+
+    quickstatements-router:
+      rule: 'PathPrefix(`/tools/quickstatements`)'
+      service: quickstatements
+      priority: 90
+      middlewares: [ quickstatements-redirectregex, quickstatements-stripprefix ]
+
+    wdqs-frontend-router:
+      rule: 'PathPrefix(`/query/`)'
+      service: wdqs-frontend
+      priority: 80
+      middlewares: [ query-frontend-stripprefix ]
+
+    wikibase-router:
+      rule: 'PathPrefix(`/`)'
+      service: wikibase
+      priority: 1
+
+  middlewares:
+    sparql-strip-prefix:
+      stripPrefix:
+        prefixes: [ /query/proxy ]
+
+    query-frontend-stripprefix:
+      stripPrefix:
+        prefixes: [ /query ]
+
+    wdqs-prefix:
+      addPrefix:
+        prefix: /bigdata/namespace/wdq/
+
+    wdqs-headers:
+      headers:
+        accessControlAllowMethods: "GET,OPTIONS,POST"
+        customResponseHeaders:
+          VARY: Accept
+        customRequestHeaders:
+          X-BIGDATA-READ-ONLY: yes
+          X-BIGDATA-MAX-QUERY-MILLIS: "300000"
+
+    wdqs-cors-headers:
+      headers:
+        accessControlAllowHeaders: "*"
+
+    wdqs-rate-limit:
+      rateLimit:
+        burst: 30
+        average: 60
+        period: 1m
+
+    quickstatements-redirectregex:
+      redirectRegex:
+        regex: /tools/quickstatements$
+        replacement: /tools/quickstatements/
+        permanent: true
+
+    quickstatements-stripprefix:
+      stripPrefix:
+        prefixes: [ /tools/quickstatements ]

@@ -1,0 +1,54 @@
+# Local overrides for the Mute Wikibase Suite (wikibase-suite/ submodule).
+# Adapted from cps-deploy-1 docker-compose.override.local.yml.
+#
+# A FRESH instance, fully separate from the CPS local stack:
+#   - project name  mute-wikibase-local  (CPS uses cps-wikibase-local)
+#   - host port     8091                 (CPS uses 8090; old ClimateKG uses 8080/8081/9999)
+#   - own volumes   mute-wikibase-local_*
+#
+# Usage (from c:\git\corpus-mute\wikibase-deploy):
+#   Copy-Item .env.example wikibase-suite\.env     # then edit values
+#   docker compose -f wikibase-suite/docker-compose.yml -f docker-compose.override.local.yml --project-directory wikibase-suite up -d
+#
+# Browse: http://localhost:8091/  http://localhost:8091/query/  http://localhost:8091/tools/quickstatements
+#
+# Never add -v to `down` unless you intend to delete the local data.
+
+name: mute-wikibase-local
+
+services:
+  traefik:
+    command:
+      - "--accesslog.format=common"
+      - "--entrypoints.web.address=:80"
+      - "--providers.file.filename=/etc/traefik/dynamic.yml"
+    # !override replaces the base file's 80:80 and 443:443 (no TLS locally).
+    ports: !override
+      - "127.0.0.1:8091:80"
+    volumes:
+      - ../config/traefik-dynamic.yml:/etc/traefik/dynamic.yml:ro
+
+  wikibase:
+    image: wikibase/wikibase:8.2.1
+    environment:
+      MW_WG_SERVER: http://${WIKIBASE_PUBLIC_HOST}:8091
+      WDQS_PUBLIC_ENDPOINT_URL: http://${WIKIBASE_PUBLIC_HOST}:8091/query/proxy/sparql
+      WDQS_PUBLIC_FRONTEND_URL: http://${WIKIBASE_PUBLIC_HOST}:8091/query/
+      QUICKSTATEMENTS_PUBLIC_URL: http://${WIKIBASE_PUBLIC_HOST}:8091/tools/quickstatements
+
+  wikibase-jobrunner:
+    image: wikibase/wikibase:8.2.1
+
+  wdqs-frontend:
+    environment:
+      WDQS_PUBLIC_URL: http://${WIKIBASE_PUBLIC_HOST}:8091/query/proxy/sparql
+      WIKIBASE_PUBLIC_URL: http://${WIKIBASE_PUBLIC_HOST}:8091/w/api.php
+
+  wdqs-updater:
+    environment:
+      WIKIBASE_CONCEPT_URI: http://${WIKIBASE_PUBLIC_HOST}:8091
+
+  quickstatements:
+    environment:
+      QUICKSTATEMENTS_PUBLIC_URL: http://${WIKIBASE_PUBLIC_HOST}:8091/tools/quickstatements/
+      WIKIBASE_PUBLIC_URL: http://${WIKIBASE_PUBLIC_HOST}:8091
