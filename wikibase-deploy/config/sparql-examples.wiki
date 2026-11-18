@@ -1,0 +1,44 @@
+== Issues ==
+
+=== All Mute issues, chronologically (table) ===
+<syntaxhighlight lang="sparql">
+#defaultView:Table
+# Every Mute issue in publication order. Properties used:
+#   P2 Mute issue ID, P4 title, P5 volume, P6 issue number, P7 publication date,
+#   P9 issue ISSN token, P10 ISBN-13, P12 described at URL, P16 sort key, P17 QA status.
+# Publication dates have month precision; the sort key (P16, chronological then printed
+# order) breaks ties and keeps issues of the same month in print order.
+# The prefix is written out so the query works whatever the installation's concept URI is.
+PREFIX wdt: <https://corpus.metamute.org/prop/direct/>
+SELECT ?issue ?issueLabel ?month ?volume ?number ?title ?issueId ?issnToken ?isbn ?url ?qaStatus
+WHERE {
+  ?issue wdt:P2 ?issueId ;
+         wdt:P5 ?volume ;
+         wdt:P6 ?number ;
+         wdt:P7 ?date ;
+         wdt:P16 ?sortKey ;
+         rdfs:label ?issueLabel .
+  FILTER(LANG(?issueLabel) = "en")
+  OPTIONAL { ?issue wdt:P4 ?title }
+  OPTIONAL { ?issue wdt:P9 ?issnToken }
+  OPTIONAL { ?issue wdt:P10 ?isbn }
+  OPTIONAL { ?issue wdt:P12 ?url }
+  OPTIONAL { ?issue wdt:P17 ?qaStatus }
+  BIND(SUBSTR(STR(?date), 1, 7) AS ?month)
+}
+ORDER BY ?date ?sortKey
+</syntaxhighlight>
+
+=== Number of issues per volume ===
+<syntaxhighlight lang="sparql">
+#defaultView:Table
+PREFIX wdt: <https://corpus.metamute.org/prop/direct/>
+SELECT ?volume (COUNT(?issue) AS ?issues) (MIN(?date) AS ?first) (MAX(?date) AS ?last)
+WHERE {
+  ?issue wdt:P2 ?issueId ;
+         wdt:P5 ?volume ;
+         wdt:P7 ?date .
+}
+GROUP BY ?volume
+ORDER BY ?volume
+</syntaxhighlight>

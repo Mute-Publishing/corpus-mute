@@ -67,6 +67,9 @@ VS Code terminal tool can hang; these use timeouts and file-redirected output):
 | `server-load.sh` | run `etl/upload_to_wikibase.py` on the server (`bootstrap` or `import`) |
 | `server-count.sh` | SPARQL counts + idempotency re-run |
 | `server-check-item.sh` | print one item's statements |
+| `load-wiki-pages.sh` | load `config/sparql-examples.wiki` as `Project:SPARQL/examples` (the Query UI Examples dialog) |
+| `server-query-test.sh` | run every query in the examples file against the live endpoint and print row counts |
+| `server-check-examples.sh` | check the examples page is served and see how the Query UI finds it |
 | `backup.sh` | DB dump + volumes + config, 7 sets retained |
 | `server-harden.sh` | fail2ban, unattended-upgrades, nightly backup cron |
 
