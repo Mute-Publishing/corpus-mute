@@ -2,6 +2,12 @@
 
 ## 2026-11-20
 
+- Local stack upgraded from `wikibase/wikibase:8.2.1` to **8.3.0** (MediaWiki 1.46.2; PHP 8.3.37 security fixes, new
+  `Special:OntologyPresets`, DB updates on every web start). `wdqs-frontend` 2.2.2 and `quickstatements` 1.2.4 came in
+  via their floating tags. Pre-upgrade dump: `wikibase-deploy/backups/sync/local-pre-upgrade-8.3.0-*.sql`
+  (gitignored). Verified: all containers healthy, counts unchanged (54 items, 20 properties, 76 pages), SPARQL 51,
+  search, admin login, both Query UI examples. **Production still on 8.2.1** and the prod override is unchanged.
+
 - Fixed the local Query UI failing every query with "Invalid URL": the persisted `wdqs-frontend-config.json` had an empty
   host (`http://:8091/...`). Regenerated; both examples now run in the UI (HTTP 200). The server's copy of that file
   has not been checked (production offline).

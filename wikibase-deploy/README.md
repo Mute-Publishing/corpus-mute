@@ -11,7 +11,7 @@ Let's Encrypt, because there is no external proxy in front of the Hetzner server
 | URL | http://localhost:8091/ | https://corpus.metamute.org/ |
 | Override file | `docker-compose.override.local.yml` | `docker-compose.override.prod.yml` |
 | Location | this folder | `/opt/mute-wikibase` on `178.105.222.174` |
-| WBS version | `wikibase-suite` @ `b4208963` (WBS 8.0.1), image `wikibase/wikibase:8.2.1` | same |
+| WBS version | `wikibase-suite` @ `b4208963` (WBS 8.0.1), image `wikibase/wikibase:8.3.0` (MediaWiki 1.46.2) since 2026-11-20 | `wikibase-suite` @ `b4208963`, image `wikibase/wikibase:8.2.1` (**not yet upgraded**; offline) |
 
 Routes (single domain): `/` Wikibase, `/query/` Query UI, `/query/proxy/sparql` SPARQL,
 `/tools/quickstatements/` QuickStatements. See `config/traefik-dynamic.yml`.
@@ -195,6 +195,23 @@ re-run safely.
 2. Push `xml/mute-issues.xml` and `etl/upload_to_wikibase.py` to `/opt/mute-wikibase/{xml,etl}/`.
 3. `server-load.sh bootstrap` once (writes `output/bootstrap.prod.json` with the created IDs), then `server-load.sh import`.
    Import skips issues whose `Mute issue ID` (P2) already exists, so it is safe to re-run.
+
+## Upgrading the Wikibase image
+
+Local first, then production. The image tag is set in the two `image:` lines (`wikibase` and `wikibase-jobrunner`) of each
+override file. The other images (`wdqs-frontend`, `quickstatements`, `traefik`, `mariadb`) float on major tags and
+update on `docker compose pull`. Procedure used on 2026-11-20 (8.2.1 -> 8.3.0):
+
+1. Read `wikibase-suite/development/images/wikibase/CHANGELOG.md` (`git fetch` in the submodule first) and check the
+   tag exists: `https://hub.docker.com/v2/repositories/wikibase/wikibase/tags`.
+2. Back up first: full dump via `sync-db.sh dump-full` (see `sync-env.ps1` for the pattern) into `backups\sync\`.
+3. Change both `image:` lines, then `docker compose ... pull` and `up -d` (the wiki container updates the database
+   schema itself on startup; 8.3.0 does this on every web start).
+4. Verify: containers healthy, `action=query&meta=siteinfo` version, item/page counts unchanged, SPARQL count 51,
+   admin login, both Query UI examples run in the browser.
+
+The `wikibase-suite` submodule pin (`wbs@8.0.1`) is separate from the image tag; upstream 8.0.2 was deferred and
+`main` only adds an unreleased Traefik alias, so it was left alone.
 
 ## Known issues / decisions
 

@@ -29,7 +29,7 @@ services:
       - ../config/traefik-dynamic.yml:/etc/traefik/dynamic.yml:ro
 
   wikibase:
-    image: wikibase/wikibase:8.2.1
+    image: wikibase/wikibase:8.3.0
     environment:
       MW_WG_SERVER: http://${WIKIBASE_PUBLIC_HOST}:8091
       WDQS_PUBLIC_ENDPOINT_URL: http://${WIKIBASE_PUBLIC_HOST}:8091/query/proxy/sparql
@@ -37,7 +37,7 @@ services:
       QUICKSTATEMENTS_PUBLIC_URL: http://${WIKIBASE_PUBLIC_HOST}:8091/tools/quickstatements
 
   wikibase-jobrunner:
-    image: wikibase/wikibase:8.2.1
+    image: wikibase/wikibase:8.3.0
 
   # Tell Blazegraph this wiki's concept URI so the endpoint predefines wd:, wdt:, p:, ps:, pq: ... for it.
   # Lets the Query UI examples (and any query) omit the PREFIX lines and work unchanged on local and prod.
