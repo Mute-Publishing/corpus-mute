@@ -11,14 +11,16 @@ Let's Encrypt, because there is no external proxy in front of the Hetzner server
 | URL | http://localhost:8091/ | https://corpus.metamute.org/ |
 | Override file | `docker-compose.override.local.yml` | `docker-compose.override.prod.yml` |
 | Location | this folder | `/opt/mute-wikibase` on `178.105.222.174` |
-| WBS version | `wikibase-suite` @ `b4208963` (WBS 8.0.1), image `wikibase/wikibase:8.3.0` (MediaWiki 1.46.2) since 2026-11-20 | `wikibase-suite` @ `b4208963`, image `wikibase/wikibase:8.2.1` (**not yet upgraded**; offline) |
+| WBS version | `wikibase-suite` @ `b4208963` (WBS 8.0.1), image `wikibase/wikibase:8.3.0` (MediaWiki 1.46.2) since 2026-11-20 | same (upgraded 2026-11-20) |
 
 Routes (single domain): `/` Wikibase, `/query/` Query UI, `/query/proxy/sparql` SPARQL,
 `/tools/quickstatements/` QuickStatements. See `config/traefik-dynamic.yml`.
 
-> **STATUS 2026-11-19: production is deliberately OFFLINE** (security incident, precaution). All containers are
-> stopped and host nginx is stopped and disabled. Do not restart until the incident is resolved; see
-> "Taking production offline and restarting it" below and `../CHANGELOG.md`.
+> **STATUS 2026-11-20: production is back ONLINE** (restarted on `wikibase/wikibase:8.3.0` after the 2026-11-19
+> precautionary shutdown; see `../CHANGELOG.md`). Host nginx stays stopped and disabled: Traefik is the only web server
+> on 80/443 (nginx was never part of this deployment and would clash with it). Note the incident follow-ups (rotate
+> `id_wikibase_sync` and the admin password, review SSH/UFW/fail2ban, copy backups off the server) are still listed in
+> the changelog.
 
 ## Production status (2026-11-18)
 

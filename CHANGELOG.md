@@ -2,6 +2,19 @@
 
 ## 2026-11-20
 
+### Production back online on 8.3.0, content synced from local
+
+- Production restarted (stack only; host `nginx` left stopped and disabled, Traefik owns 80/443) on
+  `wikibase/wikibase:8.3.0` / MediaWiki 1.46.2 after the 2026-11-19 precautionary shutdown. Cold backup of the stopped
+  volumes first: `/var/backups/mute-wikibase/pre-upgrade-8.3.0/`. `docker-compose.override.prod.yml` now has the 8.3.0 tags and
+  the `-DwikibaseConceptUri` setting; the stale WDQS journal was cleared before start so Blazegraph rebuilt it.
+  `server-verify.sh` and public checks pass (HTTPS 200 on `/`, `/query/`, `/tools/quickstatements/`, valid Let's Encrypt cert).
+- First real `sync-env.ps1 -Direction LocalToProd` run: production content replaced with local (54 items, 20 properties,
+  76 pages, 90 revisions on both sides). Safety backup `/var/backups/mute-wikibase/pre-sync-20261120-173901.sql.gz`. After
+  the WDQS reset SPARQL returns 51 issues without a `PREFIX` line and both Query UI examples run on the live site.
+- **Not done (the incident follow-ups below are still open):** rotate the `id_wikibase_sync` SSH key and admin password,
+  review SSH/UFW/fail2ban, copy backups off the server. The restart was made on your explicit instruction, as-is.
+
 - Local stack upgraded from `wikibase/wikibase:8.2.1` to **8.3.0** (MediaWiki 1.46.2; PHP 8.3.37 security fixes, new
   `Special:OntologyPresets`, DB updates on every web start). `wdqs-frontend` 2.2.2 and `quickstatements` 1.2.4 came in
   via their floating tags. Pre-upgrade dump: `wikibase-deploy/backups/sync/local-pre-upgrade-8.3.0-*.sql`
