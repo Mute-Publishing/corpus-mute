@@ -38,12 +38,19 @@ function Invoke-Uploader([string]$step) {
     if ($LASTEXITCODE -ne 0) { throw "uploader '$step' failed (exit $LASTEXITCODE)" }
 }
 
-function Load-Pages {
-    $page = Join-Path $deploy "config\sparql-examples.wiki"
-    docker cp $page "${container}:/tmp/page.wikitext"
+function Load-Page([string]$file, [string]$title, [string]$summary) {
+    $path = Join-Path $deploy $file
+    docker cp $path "${container}:/tmp/page.wikitext"
     if ($LASTEXITCODE -ne 0) { throw "docker cp failed" }
-    docker exec $container sh -c 'php /var/www/html/maintenance/run.php edit --user "$MW_ADMIN_NAME" --summary "Load Query UI examples from repo" "Project:SPARQL/examples" < /tmp/page.wikitext; rm -f /tmp/page.wikitext'
-    if ($LASTEXITCODE -ne 0) { throw "page edit failed" }
+    docker exec $container sh -c "php /var/www/html/maintenance/run.php edit --user `"`$MW_ADMIN_NAME`" --summary `"$summary`" `"$title`" < /tmp/page.wikitext; rm -f /tmp/page.wikitext"
+    if ($LASTEXITCODE -ne 0) { throw "page edit failed: $title" }
+}
+
+function Load-Pages {
+    Load-Page "config\sparql-examples.wiki" "Project:SPARQL/examples" "Load Query UI examples from repo"
+    # Module first, so the Main Page that calls it renders cleanly on first save.
+    Load-Page "config\Module-MuteIssues.lua" "Module:MuteIssues" "Load issue-list module from repo"
+    Load-Page "config\main-page.wiki" "Main Page" "Load home page from repo"
 }
 
 try {

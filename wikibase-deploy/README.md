@@ -67,6 +67,21 @@ Browse at http://localhost:8091/.
 
 Never add `-v` to `down` unless you intend to delete the data.
 
+### Branding and skin (local only so far)
+
+`config/mute-local-settings.php` sets the site name (Corpus Mute), the logo (`images/Mute_logo_2011-.jpg`) and the
+skin. It is mounted into the `wikibase` container by `docker-compose.override.local.yml` and loaded by a 3-line
+`is_file( '/mute-local-settings.php' )` include at the bottom of the (gitignored) `wikibase-suite/config/LocalSettings.php`;
+re-add that include after a fresh clone. Skin: Minerva is the default (`$wgDefaultSkin = 'minerva'`), and MobileFrontend
+serves the mobile variety to mobile devices; the footer has the "Mobile view" / "Desktop" switcher. MobileFrontend is not
+in the image, so after a fresh clone install it (gitignored) at the branch matching MediaWiki, then recreate `wikibase`:
+
+```powershell
+git clone --depth 1 --branch REL1_46 https://gerrit.wikimedia.org/r/mediawiki/extensions/MobileFrontend wikibase-suite\config\extensions\MobileFrontend
+```
+
+Use the `REL1_xx` branch that matches the image's MediaWiki version (8.3.0 = MediaWiki 1.46).
+
 ### Load the data locally
 
 A fresh local stack is empty. `local-load.ps1` does what the production data load does (admin password is read from

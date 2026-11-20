@@ -1,0 +1,7 @@
+'''Corpus Mute''' is the catalogue of [https://www.metamute.org Mute] magazine: its issues, articles and contributors, held as linked open data in Wikibase.
+
+* [[Special:Search|Search the catalogue]]
+* [{{SERVER}}/query/ Query the data with SPARQL] (see the ''Examples'' list in the Query UI)
+
+== Mute magazine issues ==
+{{#invoke:MuteIssues|list}}

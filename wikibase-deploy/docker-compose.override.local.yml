@@ -30,6 +30,11 @@ services:
 
   wikibase:
     image: wikibase/wikibase:8.3.0
+    # Branding: logo from ../images and site name via config/mute-local-settings.php.
+    # (paths are relative to wikibase-suite/, the --project-directory)
+    volumes:
+      - ../../images/Mute_logo_2011-.jpg:/var/www/html/resources/assets/corpus-mute-logo.jpg:ro
+      - ../config/mute-local-settings.php:/mute-local-settings.php:ro
     environment:
       MW_WG_SERVER: http://${WIKIBASE_PUBLIC_HOST}:8091
       WDQS_PUBLIC_ENDPOINT_URL: http://${WIKIBASE_PUBLIC_HOST}:8091/query/proxy/sparql
