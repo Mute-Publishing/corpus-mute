@@ -53,7 +53,7 @@ services:
     mem_limit: 64m
 
   wikibase:
-    image: wikibase/wikibase:8.2.1
+    image: wikibase/wikibase:8.3.0
     mem_limit: 768m
     environment:
       MW_WG_SERVER: https://${WIKIBASE_PUBLIC_HOST}
@@ -62,7 +62,7 @@ services:
       QUICKSTATEMENTS_PUBLIC_URL: https://${WIKIBASE_PUBLIC_HOST}/tools/quickstatements
 
   wikibase-jobrunner:
-    image: wikibase/wikibase:8.2.1
+    image: wikibase/wikibase:8.3.0
     mem_limit: 256m
 
   mysql:
