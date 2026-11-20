@@ -8,8 +8,8 @@
 #   P9 issue ISSN token, P10 ISBN-13, P12 described at URL, P16 sort key, P17 QA status.
 # Publication dates have month precision; the sort key (P16, chronological then printed
 # order) breaks ties and keeps issues of the same month in print order.
-# The prefix is written out so the query works whatever the installation's concept URI is.
-PREFIX wdt: <https://corpus.metamute.org/prop/direct/>
+# No PREFIX lines: the query service predefines wdt: for this wiki (WIKIBASE_CONCEPT_URI_PARAM on the wdqs
+# service), so the same query works on localhost and on corpus.metamute.org.
 SELECT ?issue ?issueLabel ?month ?volume ?number ?title ?issueId ?issnToken ?isbn ?url ?qaStatus
 WHERE {
   ?issue wdt:P2 ?issueId ;
@@ -32,7 +32,6 @@ ORDER BY ?date ?sortKey
 === Number of issues per volume ===
 <syntaxhighlight lang="sparql">
 #defaultView:Table
-PREFIX wdt: <https://corpus.metamute.org/prop/direct/>
 SELECT ?volume (COUNT(?issue) AS ?issues) (MIN(?date) AS ?first) (MAX(?date) AS ?last)
 WHERE {
   ?issue wdt:P2 ?issueId ;

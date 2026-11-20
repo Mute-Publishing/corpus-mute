@@ -39,6 +39,13 @@ services:
   wikibase-jobrunner:
     image: wikibase/wikibase:8.2.1
 
+  # Tell Blazegraph this wiki's concept URI so the endpoint predefines wd:, wdt:, p:, ps:, pq: ... for it.
+  # Lets the Query UI examples (and any query) omit the PREFIX lines and work unchanged on local and prod.
+  # Must equal WIKIBASE_CONCEPT_URI of wdqs-updater below (the URI the data is stored under).
+  wdqs:
+    environment:
+      WIKIBASE_CONCEPT_URI_PARAM: "-DwikibaseConceptUri=http://${WIKIBASE_PUBLIC_HOST}:8091"
+
   wdqs-frontend:
     environment:
       WDQS_PUBLIC_URL: http://${WIKIBASE_PUBLIC_HOST}:8091/query/proxy/sparql

@@ -1,0 +1,2 @@
+# Shell scripts are copied into Linux containers / servers: keep LF.
+*.sh text eol=lf

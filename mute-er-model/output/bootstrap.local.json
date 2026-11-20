@@ -1,0 +1,31 @@
+{
+  "target": "local",
+  "api": "http://localhost:8091/w/api.php",
+  "properties": {
+    "instance_of": "P1",
+    "local_id": "P2",
+    "series": "P3",
+    "title": "P4",
+    "volume": "P5",
+    "number": "P6",
+    "publication_date": "P7",
+    "issn": "P8",
+    "issn_issue_token": "P9",
+    "isbn13": "P10",
+    "isbn_raw": "P11",
+    "source_url": "P12",
+    "language": "P13",
+    "edition_note": "P14",
+    "insert_note": "P15",
+    "sort_key": "P16",
+    "qa_status": "P17",
+    "label_raw": "P18",
+    "wikidata_equiv": "P19",
+    "wikidata_item": "P20"
+  },
+  "items": {
+    "class_issue": "Q1",
+    "series_mute": "Q2",
+    "lang_en": "Q3"
+  }
+}

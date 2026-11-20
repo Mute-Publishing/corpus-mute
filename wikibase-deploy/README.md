@@ -16,6 +16,10 @@ Let's Encrypt, because there is no external proxy in front of the Hetzner server
 Routes (single domain): `/` Wikibase, `/query/` Query UI, `/query/proxy/sparql` SPARQL,
 `/tools/quickstatements/` QuickStatements. See `config/traefik-dynamic.yml`.
 
+> **STATUS 2026-11-19: production is deliberately OFFLINE** (security incident, precaution). All containers are
+> stopped and host nginx is stopped and disabled. Do not restart until the incident is resolved; see
+> "Taking production offline and restarting it" below and `../CHANGELOG.md`.
+
 ## Production status (2026-11-18)
 
 - Server: Ubuntu 26.04, 2 vCPU, 3.8 GB RAM + 2 GB swap. Memory caps in the prod override are sized for this; the
@@ -38,6 +42,12 @@ Routes (single domain): `/` Wikibase, `/query/` Query UI, `/query/proxy/sparql` 
 
 ## Local
 
+Run the start command from the `wikibase-deploy` folder (the paths are relative).
+
+**Setup (run once, or after a fresh clone):** the first block below fetches the `wikibase-suite` submodule and creates `wikibase-suite\.env` with new random local passwords. It does not start any containers. The script won't overwrite an existing `.env`, so it's safe to re-run.
+
+**Start (run each time you want the stack up):** the start command, which launches the containers from the files set up in the first step. It is non-destructive: it does not delete data.
+
 ```powershell
 Set-Location wikibase-deploy
 git submodule update --init
@@ -45,7 +55,64 @@ git submodule update --init
 docker compose -f wikibase-suite/docker-compose.yml -f docker-compose.override.local.yml --project-directory wikibase-suite up -d
 ```
 
+Start command, from `wikibase-deploy` directory:
+
+```powershell
+docker compose -f wikibase-suite/docker-compose.yml -f docker-compose.override.local.yml --project-directory wikibase-suite up -d
+```
+
+Browse at http://localhost:8091/.
+
 Never add `-v` to `down` unless you intend to delete the data.
+
+### Load the data locally
+
+A fresh local stack is empty. `local-load.ps1` does what the production data load does (admin password is read from
+`wikibase-suite\.env` into the process only, never printed):
+
+```powershell
+.\scripts\local-load.ps1 -Mode all          # bootstrap schema (once) + import issues + SPARQL examples page
+.\scripts\local-load.ps1 -Mode import -Dry # preview only
+```
+
+The import is idempotent (skips issues whose `Mute issue ID` exists). Local was loaded on 2026-11-20: P1-P20,
+Q1-Q3, 51 issues Q4-Q54, `Project:SPARQL/examples`. Uses python 3 stdlib only.
+
+## Syncing local <-> production
+
+For when an operator needs one side to match the other (for example: build or correct content locally, then publish
+it; or refresh local from the server):
+
+```powershell
+.\scripts\sync-env.ps1 -Direction LocalToProd -DryRun   # dump + compare counts, change nothing
+.\scripts\sync-env.ps1 -Direction LocalToProd           # replace production content with local
+.\scripts\sync-env.ps1 -Direction ProdToLocal           # replace local content with production
+```
+
+- **Copied:** all wiki content (items, properties, wiki pages, revisions, logs). **Not copied** (each side keeps its
+  own): user accounts/passwords, OAuth consumers (QuickStatements), caches, job queue, `.env`, uploaded files.
+- **Whole-content replace, last writer wins.** Anything edited on the target since the last sync is overwritten, so
+  do not edit both sides between syncs. The target is full-dumped first (local: `backups\sync\local-pre-sync-*.sql`;
+  server: `/var/backups/mute-wikibase/pre-sync-*.sql.gz`), and you must type `SYNC` to proceed.
+- The restore refuses to run if the two sides' user tables differ (revision authors are stored as user ids).
+- After the restore the target's search index is rebuilt and its SPARQL store is reset; WDQS reloads from the
+  restored data in a minute or two, so SPARQL results lag briefly.
+- Production must be running. While it is deliberately offline (see STATUS above) the script stops at pre-flight.
+- Pieces: `sync-env.ps1` (operator entry point), `sync-db.sh` (dump/restore, runs inside the MariaDB container on
+  both sides), `server-sync.sh` (server half), `pull.ps1` (scp download; `push.ps1` is the upload).
+- The example queries in `config/sparql-examples.wiki` have no `PREFIX` lines, so the same page works on both sides
+  (see "SPARQL prefixes" below). Syncing copies the page along with the rest of the content.
+
+### SPARQL prefixes (`wdt:` etc.)
+
+The `wdqs` service is started with `WIKIBASE_CONCEPT_URI_PARAM=-DwikibaseConceptUri=<concept URI>` (set in each
+override file), so the SPARQL endpoint predefines `wd:`, `wdt:`, `p:`, `ps:`, `pq:` ... for this wiki. Queries and
+examples can use `wdt:P2` directly, with no `PREFIX` line, on `http://localhost:8091` and on `https://corpus.metamute.org`.
+The value must match `WIKIBASE_CONCEPT_URI` of `wdqs-updater` (local `http://localhost:8091`, prod
+`https://corpus.metamute.org`). **Changing it on an existing store makes Blazegraph refuse to start** (vocabulary
+versioning error): stop `wdqs` + `wdqs-updater`, delete `*.jnl` in the `wdqs-data` volume and start them again (the updater
+reloads everything; `sync-env.ps1` does this reset too). Applied locally on 2026-11-20; **production still needs it**
+when it is brought back up: push `docker-compose.override.prod.yml`, run the WDQS reset, then `server-up.sh`.
 
 ## Production operations
 
@@ -70,10 +137,57 @@ VS Code terminal tool can hang; these use timeouts and file-redirected output):
 | `load-wiki-pages.sh` | load `config/sparql-examples.wiki` as `Project:SPARQL/examples` (the Query UI Examples dialog) |
 | `server-query-test.sh` | run every query in the examples file against the live endpoint and print row counts |
 | `server-check-examples.sh` | check the examples page is served and see how the Query UI finds it |
+| `server-sync.sh` | server half of `sync-env.ps1` (content dump / restore with safety backup, reindex, WDQS reset) |
+| `sync-db.sh` | dump/restore logic shared by local and server (runs inside the MariaDB container) |
 | `backup.sh` | DB dump + volumes + config, 7 sets retained |
 | `server-harden.sh` | fail2ban, unattended-upgrades, nightly backup cron |
 
+Windows-side scripts (run from `wikibase-deploy`, not copied to the server):
+
+| Script | Purpose |
+|---|---|
+| `new-local-env.ps1` | create `wikibase-suite\.env` for the local stack from `.env.example` with random passwords; never overwrites an existing file |
+| `local-load.ps1` | load the Mute data into the local wiki (`-Mode bootstrap\|import\|pages\|all`, `-Dry` to preview); local counterpart of `server-load.sh` + `load-wiki-pages.sh` |
+| `sync-env.ps1` | operator sync of wiki content between local and production (`-Direction LocalToProd\|ProdToLocal`, `-DryRun`); see "Syncing local <-> production" |
+| `push.ps1` | upload one file to the server by scp, with timeout (normalises `.sh` to LF) |
+| `pull.ps1` | download one file from the server by scp, with timeout |
+| `remote.ps1` | run one command on the server over SSH, with timeout |
+
 Redeploy after changing a compose or Traefik file: push the file, then `server-up.sh`.
+
+### Taking production offline and restarting it
+
+Containers use `restart: unless-stopped`: once stopped manually they stay stopped across reboots. Data lives in
+Docker volumes and is not affected by stopping.
+
+**Stop (offline, data kept):**
+
+```powershell
+.\scripts\remote.ps1 -Command "docker stop `$(docker ps -q); systemctl stop nginx; systemctl disable nginx" -TimeoutSec 180
+```
+
+Or on the server: `cd /opt/mute-wikibase && docker compose -f wikibase-suite/docker-compose.yml -f docker-compose.override.prod.yml --project-directory wikibase-suite stop`.
+Never use `down -v` (deletes the data volumes).
+
+**Restart (only once the incident is resolved):**
+
+1. Before exposing the server again: rotate the `id_wikibase_sync` SSH key and the Wikibase admin password (and any
+   other credentials that may have been exposed), review SSH/UFW/fail2ban state, and decide whether to restore from
+   a known-good backup in `/var/backups/mute-wikibase/` instead of the current volumes.
+2. Confirm nothing else is holding ports 80/443 (host nginx must stay disabled; Traefik is the only web server):
+   `.\scripts\remote.ps1 -Command "ss -ltnp | grep -E ':(80|443)\b'; systemctl is-active nginx"`
+3. Start the stack (non-destructive `up -d`):
+   `.\scripts\remote.ps1 -Command "bash /opt/mute-wikibase/scripts/server-up.sh" -TimeoutSec 300`
+4. Verify (containers healthy, HTTPS endpoints, certificate, memory):
+   `.\scripts\remote.ps1 -Command "bash /opt/mute-wikibase/scripts/server-verify.sh" -TimeoutSec 90`
+   Allow a few minutes for MySQL, Elasticsearch and WDQS to become healthy. The Let's Encrypt certificate is kept in
+   the `traefik-letsencrypt-data` volume and is reused.
+5. Check `https://corpus.metamute.org/`, `/query/` and `/tools/quickstatements/`, and run `server-count.sh` to confirm
+   the 51 issues are still present.
+6. Add a changelog entry in `../CHANGELOG.md` and remove the OFFLINE notice at the top of this file.
+
+If one container fails to start, check it with `docker logs mute-wikibase-prod-<service>-1`; `server-up.sh` can be
+re-run safely.
 
 ### Data load
 
@@ -83,6 +197,13 @@ Redeploy after changing a compose or Traefik file: push the file, then `server-u
    Import skips issues whose `Mute issue ID` (P2) already exists, so it is safe to re-run.
 
 ## Known issues / decisions
+
+- **Query UI says "Server error: Failed to execute 'open' on 'XMLHttpRequest': Invalid URL"**: the generated, gitignored
+  `wikibase-suite/config/wdqs-frontend-config.json` is written once on first start and kept. If it was created while
+  `WIKIBASE_PUBLIC_HOST` was empty it holds `http://:8091/...`. Check `grep uri wikibase-suite/config/wdqs-frontend-config.json`;
+  if a host is missing, delete the file and run `docker compose ... up -d --force-recreate wdqs-frontend` (on the server
+  the same file is under `/opt/mute-wikibase/wikibase-suite/config/`), then hard-refresh the browser (Ctrl+Shift+R;
+  the old config is cached). Fixed locally 2026-11-20; **check the server's copy when it is brought back up.**
 
 - Traefik needs `--entrypoints.websecure.http.tls.domains[0].main` because the routing file has no `Host()` rule;
   without it Traefik serves its default self-signed certificate. This is in the prod override.

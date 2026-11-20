@@ -75,6 +75,10 @@ services:
 
   wdqs:
     mem_limit: 1g
+    # Predefine wd:, wdt:, p:, ps:, pq: ... for this wiki so queries/examples need no PREFIX lines
+    # (identical on local and prod). Must equal WIKIBASE_CONCEPT_URI of wdqs-updater below.
+    environment:
+      WIKIBASE_CONCEPT_URI_PARAM: "-DwikibaseConceptUri=https://${WIKIBASE_PUBLIC_HOST}"
 
   wdqs-updater:
     mem_limit: 384m
