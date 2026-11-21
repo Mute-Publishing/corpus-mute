@@ -55,6 +55,7 @@ services:
   wdqs-frontend:
     volumes:
       - ../config/wdqs-frontend-entrypoint.sh:/entrypoint.sh:ro
+      - ../config/wdqs-frontend-config.local.json:/config/wdqs-frontend-config.json:ro
       - ../config/init.mjs:/usr/share/nginx/html/wikibase/init.mjs:ro
       - ../config/embedInit.mjs:/usr/share/nginx/html/wikibase/embedInit.mjs:ro
     environment:

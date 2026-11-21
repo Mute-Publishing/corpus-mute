@@ -1,0 +1,27 @@
+{
+        "api": {
+                "sparql": {
+                        "uri": "http://localhost:8091/query/proxy/sparql"
+                },
+                "wikibase": {
+                        "uri": "http://localhost:8091/w/api.php"
+                },
+                "examples": {
+                        "server": "http://localhost:8091/",
+                        "apiPath": "w/api.php",
+                        "pageTitle": "Project:SPARQL/examples",
+                        "pagePathElement": "wiki/"
+                },
+                "urlShortener": "tinyurl",
+                "query-builder": {
+                        "server": "https://gerrit.wikimedia.org/g/wikidata/query-builder"
+                }
+        },
+        "brand": {
+                "title": "Wikibase Query Service",
+                "logo": "logo.svg",
+                "favicon": "favicon.ico",
+                "copyrightUrl": "",
+                "index": "./index.html"
+        }
+}

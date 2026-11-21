@@ -1,0 +1,27 @@
+{
+        "api": {
+                "sparql": {
+                        "uri": "https://corpus.metamute.org/query/proxy/sparql"
+                },
+                "wikibase": {
+                        "uri": "https://corpus.metamute.org/w/api.php"
+                },
+                "examples": {
+                        "server": "https://corpus.metamute.org/",
+                        "apiPath": "w/api.php",
+                        "pageTitle": "Project:SPARQL/examples",
+                        "pagePathElement": "wiki/"
+                },
+                "urlShortener": "tinyurl",
+                "query-builder": {
+                        "server": "https://gerrit.wikimedia.org/g/wikidata/query-builder"
+                }
+        },
+        "brand": {
+                "title": "Wikibase Query Service",
+                "logo": "logo.svg",
+                "favicon": "favicon.ico",
+                "copyrightUrl": "",
+                "index": "./index.html"
+        }
+}
