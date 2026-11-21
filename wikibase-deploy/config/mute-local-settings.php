@@ -37,7 +37,8 @@ $wgHooks['BeforePageDisplay'][] = static function ( $out, $skin ): void {
 		'%3Cpath d=\'M12.2 13.6a7 7 0 1 1 1.4-1.4l5.4 5.4-1.4 1.4zM3 8a5 5 0 1 0 10 0A5 5 0 0 0 3 8\'/%3E%3C/svg%3E") center/contain no-repeat;' .
 		'mask:url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 20 20\'%3E' .
 		'%3Cpath d=\'M12.2 13.6a7 7 0 1 1 1.4-1.4l5.4 5.4-1.4 1.4zM3 8a5 5 0 1 0 10 0A5 5 0 0 0 3 8\'/%3E%3C/svg%3E") center/contain no-repeat;' .
-		'background-color:#36393e;background-image:none}'
+		'background-color:#36393e;background-image:none}' .
+		'.page-Main_Page .firstHeading,.page-Main_Page #toc{display:none!important}'
 	);
 	$out->addInlineScript(
 		'(function f(){if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",f);return;}' .
@@ -75,4 +76,14 @@ $wgHooks['BeforePageDisplay'][] = static function ( $out ): void {
 		'wbUserSpecifiedLanguages' => array_values( array_unique( array_merge(
 			$babel->getUserSpecifiedLanguages( $user ), $extra ) ) ),
 	] );
+	# Hide language rows that have no label/description (e.g. German, Spanish, "default for all languages")
+	# so the "No label defined" / "No description defined" warnings don't appear.
+	# Desktop view: hide all non-English rows in the "In more languages" table.
+	# Mobile view: hide the entire "In more languages" section (it only shows missing languages).
+	$out->addInlineStyle(
+		'.wikibase-entitytermsforlanguageview-mul{display:none!important}' .
+		'.wikibase-entitytermsforlanguageview{display:none!important}' .
+		'.wikibase-entitytermsforlanguageview-en{display:table-row!important}' .
+		'.wb-ui-in-more-languages-expandable{display:none!important}'
+	);
 };

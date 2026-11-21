@@ -15,3 +15,6 @@ load_page() {
 }
 
 load_page "config/sparql-examples.wiki" "Project:SPARQL/examples" "Load Query UI examples from repo"
+# Module first, so the Main Page that calls it renders cleanly on first save.
+load_page "config/Module-MuteIssues.lua" "Module:MuteIssues" "Load issue-list module from repo"
+load_page "config/main-page.wiki" "Main Page" "Load home page from repo"

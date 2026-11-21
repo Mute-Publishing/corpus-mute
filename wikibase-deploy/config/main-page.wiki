@@ -1,3 +1,6 @@
+{{DISPLAYTITLE:}}
+__NOTOC__
+
 '''Corpus Mute''' is the catalogue of [https://www.metamute.org Mute] magazine: its issues, articles and contributors, held as linked open data in Wikibase.
 
 * [[Special:Search|Search the catalogue]]

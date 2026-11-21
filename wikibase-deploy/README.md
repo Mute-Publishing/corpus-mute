@@ -63,14 +63,18 @@ Start command, from `wikibase-deploy` directory:
 docker compose -f wikibase-suite/docker-compose.yml -f docker-compose.override.local.yml --project-directory wikibase-suite up -d
 ```
 
-Browse at http://localhost:8091/.
+Browse at http://localhost:8091/
 
 Never add `-v` to `down` unless you intend to delete the data.
 
-### Branding and skin (local only so far)
+### Branding and skin (local and production)
 
-`config/mute-local-settings.php` sets the site name (Corpus Mute), the logo (`images/Mute_logo_2011-.jpg`) and the
-skin. It is mounted into the `wikibase` container by `docker-compose.override.local.yml` and loaded by a 3-line
+`config/mute-local-settings.php` sets the site name (Corpus Mute), the logo (`images/Mute_logo_2011-.jpg`), the
+skin, the de/es term languages and the Query menu link. On production it is applied by `scripts/server-branding.sh`
+(push `config/mute-local-settings.php`, `config/Mute_logo_2011-.jpg` and the prod override first; the script installs
+MobileFrontend, adds the include and recreates `wikibase`). The Main Page issue list is `config/Module-MuteIssues.lua` +
+`config/main-page.wiki`, loaded by `local-load.ps1 -Mode pages` / `load-wiki-pages.sh`. It is mounted into the `wikibase`
+container by the override files and loaded by a 3-line
 `is_file( '/mute-local-settings.php' )` include at the bottom of the (gitignored) `wikibase-suite/config/LocalSettings.php`;
 re-add that include after a fresh clone. Skin: Minerva is the default (`$wgDefaultSkin = 'minerva'`), and MobileFrontend
 serves the mobile variety to mobile devices; the footer has the "Mobile view" / "Desktop" switcher. MobileFrontend is not

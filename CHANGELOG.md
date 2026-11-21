@@ -2,6 +2,21 @@
 
 ## 2026-11-20
 
+### Branding, Minerva skin, de/es term languages and Main Page issue list (local + production)
+
+- Site name **Corpus Mute**, logo `images/Mute_logo_2011-.jpg`, **Minerva** as default skin with **MobileFrontend**
+  (branch `REL1_46`, installed in `wikibase-suite/config/extensions/`, gitignored) giving the mobile view and the footer
+  Mobile view / Desktop switcher, a **Query** link in the Minerva left menu, and German then Spanish after English in the
+  item "In more languages" box. All in `wikibase-deploy/config/mute-local-settings.php`, mounted by both override files and
+  included from `wikibase-suite/config/LocalSettings.php` (generated, gitignored).
+- Main Page now lists the 51 issues by volume, read live from the items by a Lua module (`Module:MuteIssues`,
+  `config/Module-MuteIssues.lua`; page text in `config/main-page.wiki`). Loaded by `local-load.ps1 -Mode pages` and
+  `load-wiki-pages.sh`.
+- **Deployed to production** (backup first: `/var/backups/mute-wikibase/20261120-203143`): pushed the files, ran the new
+  `scripts/server-branding.sh` (clone MobileFrontend, append the include to the server's `LocalSettings.php`, recreate
+  `wikibase` + `jobrunner` with `up -d`), then `load-wiki-pages.sh`. Verified on https://corpus.metamute.org/: Minerva
+  skin, logo, Query menu link, Mobile view footer link, German/Spanish rows, 51-issue list, all HTTPS endpoints 200.
+
 ### Production back online on 8.3.0, content synced from local
 
 - Production restarted (stack only; host `nginx` left stopped and disabled, Traefik owns 80/443) on
