@@ -92,6 +92,10 @@ services:
 
   wdqs-frontend:
     mem_limit: 64m
+    volumes:
+      - ../config/wdqs-frontend-entrypoint.sh:/entrypoint.sh:ro
+      - ../config/init.mjs:/usr/share/nginx/html/wikibase/init.mjs:ro
+      - ../config/embedInit.mjs:/usr/share/nginx/html/wikibase/embedInit.mjs:ro
     environment:
       WDQS_PUBLIC_URL: https://${WIKIBASE_PUBLIC_HOST}/query/proxy/sparql
       WIKIBASE_PUBLIC_URL: https://${WIKIBASE_PUBLIC_HOST}/w/api.php
