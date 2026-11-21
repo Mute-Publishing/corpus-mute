@@ -11,6 +11,7 @@
 #   /query/proxy/sparql    -> wdqs        (rewritten to /bigdata/namespace/wdq/sparql)
 #   /query/                -> wdqs-frontend
 #   /tools/quickstatements -> quickstatements (prefix stripped)
+#   /r/CODE                -> wikibase, rewritten to /wiki/Special:UrlRedirector/CODE (short links)
 
 http:
   services:
@@ -53,6 +54,13 @@ http:
       priority: 80
       middlewares: [ query-frontend-stripprefix ]
 
+    # Short links from the MediaWiki UrlShortener extension ($wgUrlShortenerTemplate = '/r/$1').
+    shorturl-router:
+      rule: 'PathPrefix(`/r/`)'
+      service: wikibase
+      priority: 85
+      middlewares: [ shorturl-rewrite ]
+
     wikibase-router:
       rule: 'PathPrefix(`/`)'
       service: wikibase
@@ -66,6 +74,11 @@ http:
     query-frontend-stripprefix:
       stripPrefix:
         prefixes: [ /query ]
+
+    shorturl-rewrite:
+      replacePathRegex:
+        regex: '^/r/(.+)$'
+        replacement: '/wiki/Special:UrlRedirector/$1'
 
     wdqs-prefix:
       addPrefix:

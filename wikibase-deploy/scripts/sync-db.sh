@@ -10,7 +10,7 @@
 # Content-only means environment-specific tables are NOT copied, so each side keeps
 # its own accounts, passwords, OAuth consumers (QuickStatements) and caches:
 #   user*, oauth_*, oathauth_*, cu_*, echo_*, loginnotify_*, objectcache, l10n_cache,
-#   module_deps, job, searchindex
+#   module_deps, job, searchindex, urlshortcodes (short links hold absolute URLs of their own host)
 #
 # Every dump starts with a "-- MUTE-SYNC-USERS:" header (user id:name list). Restore
 # refuses to run if the target's users differ, because actor rows in the dump point
@@ -31,7 +31,7 @@ excluded_tables() {
   q "select table_name from information_schema.tables where table_schema = database() and (
        table_name in ('user','user_groups','user_properties','user_autocreate_serial','user_newtalk',
                       'user_former_groups','user_email_token','objectcache','l10n_cache','module_deps',
-                      'job','searchindex')
+                      'job','searchindex','urlshortcodes')
        or table_name like 'oauth\\_%' or table_name like 'oathauth\\_%' or table_name like 'cu\\_%'
        or table_name like 'echo\\_%' or table_name like 'loginnotify\\_%')"
 }

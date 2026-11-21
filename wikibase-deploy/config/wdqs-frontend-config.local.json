@@ -12,7 +12,7 @@
                         "pageTitle": "Project:SPARQL/examples",
                         "pagePathElement": "wiki/"
                 },
-                "urlShortener": "tinyurl",
+                "urlShortener": "local",
                 "query-builder": {
                         "server": "https://gerrit.wikimedia.org/g/wikidata/query-builder"
                 }

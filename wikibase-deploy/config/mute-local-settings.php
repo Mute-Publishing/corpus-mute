@@ -22,6 +22,24 @@ wfLoadExtension( 'extensions/MobileFrontend' );
 $wgMFAutodetectMobileView = true;      # mobile browsers get the mobile view automatically
 $wgMFDefaultSkinClass = 'SkinMinerva'; # skin used in the mobile view
 
+# URL shortener for the Query UI ("Link" > short URL) and the wiki sidebar. Replaces TinyURL, which
+# rejects long query URLs (Cloudflare 403) and would send our queries to a third party.
+# UrlShortener lives in wikibase-suite/config/extensions/UrlShortener (branch REL1_46, gitignored) and
+# needs its table: php maintenance/run.php update --quick (see README, "URL shortener").
+# The Query UI calls /w/api.php?action=shortenurl on the same origin (Traefik routes /w/ to wikibase).
+# Short links are served at /r/CODE: Traefik rewrites /r/CODE to /wiki/Special:UrlRedirector/CODE
+# (config/traefik-dynamic.yml, router shorturl-router), because Apache has no /r/ rule.
+wfLoadExtension( 'extensions/UrlShortener' );
+$wgUrlShortenerTemplate = '/r/$1';
+# No '$' in the codes (some sites strip it from links). Must never change once links exist.
+$wgUrlShortenerIdSet = '23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
+# SPARQL query URLs are long (default limit 2000 characters).
+$wgUrlShortenerUrlSizeLimit = 8000;
+# Traefik is the only client of the wiki: without this, MediaWiki sees Traefik's address as the client
+# of every request, so the extension's per-IP rate limit would be shared by all visitors. Trust the
+# X-Forwarded-For that Traefik sets (private Docker ranges only; Traefik overwrites client-sent values).
+$wgCdnServersNoPurge = array_merge( $wgCdnServersNoPurge ?? [], [ '172.16.0.0/12', '10.0.0.0/8', '192.168.0.0/16' ] );
+
 # Left (hamburger) menu in Minerva: add a "Query" link to the SPARQL Query UI (/query/).
 # Minerva builds that menu in PHP with no hook for extra entries (only Home and Random can be
 # overridden via MediaWiki:Sidebar), so the <li> is appended client-side, copying the markup of

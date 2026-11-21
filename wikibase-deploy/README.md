@@ -86,6 +86,27 @@ git clone --depth 1 --branch REL1_46 https://gerrit.wikimedia.org/r/mediawiki/ex
 
 Use the `REL1_xx` branch that matches the image's MediaWiki version (8.3.0 = MediaWiki 1.46).
 
+### URL shortener (Query UI "Short URL to this page")
+
+The Query UI shortens links with MediaWiki's own `UrlShortener` extension (not TinyURL, which answers 403 to long
+query URLs). It is not in the image either; install it like MobileFrontend, create its table once, then restart:
+
+```powershell
+git clone --depth 1 --branch REL1_46 https://gerrit.wikimedia.org/r/mediawiki/extensions/UrlShortener wikibase-suite\config\extensions\UrlShortener
+docker exec mute-wikibase-local-wikibase-1 php /var/www/html/maintenance/run.php update --quick
+docker restart mute-wikibase-local-wikibase-1 mute-wikibase-local-wikibase-jobrunner-1
+```
+
+How the pieces fit behind Traefik (one host, path-based routing):
+
+- `wdqs-frontend-config.*.json` sets `"urlShortener": "local"`; the patched `init.mjs`/`embedInit.mjs` add that
+  provider, which POSTs `action=shortenurl` to the same origin `/w/api.php` (routed to `wikibase`, no CORS, no third party).
+- The short link is `/r/CODE` (`$wgUrlShortenerTemplate` in `mute-local-settings.php`). Apache has no `/r/` rule, so
+  Traefik's `shorturl-router` rewrites `/r/CODE` to `/wiki/Special:UrlRedirector/CODE` (`config/traefik-dynamic.yml`).
+- URLs up to 8000 characters are accepted; only the wiki's own host (and its non-standard port locally) may be shortened.
+- `urlshortcodes` is excluded from `sync-env.ps1` (short links store absolute URLs of their own host).
+- Patching `init.mjs` again after a wdqs-frontend upgrade: keep the `local` provider and the `(r?"https://"+r:"")+"/w/api.php"` URL.
+
 ### Load the data locally
 
 A fresh local stack is empty. `local-load.ps1` does what the production data load does (admin password is read from
