@@ -24,6 +24,13 @@ sed -i '/^}$/i\
         proxy_hide_header Content-Security-Policy;\
         add_header Access-Control-Allow-Origin *;\
         add_header Content-Type text/plain;\
+    }\
+    # Disable caching for patched JS files so browser picks up changes immediately.\
+    location ~* /wikibase/(init|embedInit)\\.mjs$ {\
+        root /usr/share/nginx/html;\
+        add_header Cache-Control "no-cache, no-store, must-revalidate";\
+        add_header Pragma no-cache;\
+        add_header Expires 0;\
     }' /etc/nginx/conf.d/default.conf
 
 exec "$@"
