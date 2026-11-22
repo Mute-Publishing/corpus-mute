@@ -2,6 +2,18 @@
 
 ## 2026-11-22
 
+### Print labels for the 51 issues (Avery J8159, QR code + item data)
+
+- New `mute-er-model/etl/make_issue_labels.py`: reads the 51 issues (P2) in sort-key order (P16) from the query service,
+  creates a short link for each item page with the wiki's UrlShortener API (paced at 13 s because of the extension's rate
+  limit; cached in `mute-er-model/output/issue_short_links.csv`), draws the QR codes locally with `segno` and writes
+  `labels.html` / `labels.pdf` (3 A4 sheets, 24 labels of 63.5 x 33.9 mm each) via headless Edge/Chrome.
+- Label: QR code (full `https://` short link) and three lines: short URL without `https://`, sort key (P16), `ISSN` token (P9).
+- Created the 51 short links on production (`/r/6` to `/r/x`); all redirect (301) to their own item. Q12 carries the ISSN token
+  `1356-7748-X8`; it is printed as held on the wiki.
+- Not yet checked: the sheet margins (assumed, not from Avery's template), a test print on plain paper (`test-grid.pdf`) and
+  a phone scan of a QR code. Documented in `docs/url-shortener.md`, section "Printing labels with QR codes and item data".
+
 ### Short links and QR codes for wiki pages and items (local + production)
 
 - The UrlShortener extension only offers "Get shortened URL" in the Tools sidebar (Vector etc.) or in Minerva's mobile view,

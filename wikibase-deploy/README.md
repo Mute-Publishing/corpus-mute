@@ -67,6 +67,30 @@ Browse at http://localhost:8091/
 
 Never add `-v` to `down` unless you intend to delete the data.
 
+### Stopping the local stack
+
+Run from the `wikibase-deploy` folder. Data lives in Docker volumes, so none of the commands below delete it.
+
+**Stop (containers kept, fastest to start again):**
+
+```powershell
+docker compose -f wikibase-suite/docker-compose.yml -f docker-compose.override.local.yml --project-directory wikibase-suite stop
+```
+
+Start it again with the `up -d` command above.
+
+**Stop and remove the containers (data kept):**
+
+```powershell
+docker compose -f wikibase-suite/docker-compose.yml -f docker-compose.override.local.yml --project-directory wikibase-suite down
+```
+
+Do **not** add `-v` to `down`: it deletes the volumes, meaning the local wiki content, the database and the short links.
+Check afterwards with `docker ps`: no `mute-wikibase-local-*` containers should be listed.
+
+To free memory for other work you can also quit Docker Desktop (system tray whale icon, **Quit Docker Desktop**), but that
+stops every container on the machine, not only this project. Stopping the stack as above is enough to close the Mute wiki.
+
 ### Branding and skin (local and production)
 
 `config/mute-local-settings.php` sets the site name (Corpus Mute), the logo (`images/Mute_logo_2011-.jpg`), the

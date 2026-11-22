@@ -7,9 +7,10 @@ host, Traefik routing by path) and verified there on 2026-11-21, locally and in 
 Tested with `wikibase/wikibase:8.3.0` (MediaWiki 1.46.2), `wikibase/wdqs-frontend:2` (2.2.x), UrlShortener `REL1_46`
 (1.2.0), Traefik v3 as shipped in Wikibase Suite.
 
-The guide covers two things: short links for **Query UI** links (Steps 1 to 5 below) and short links plus **QR codes for
-wiki pages and items** (section "Short links and QR codes for wiki pages and items"). Steps 1 to 4 are shared; Step 5 is
-only for the Query UI.
+The guide covers three things: short links for **Query UI** links (Steps 1 to 5 below), short links plus **QR codes for
+wiki pages and items** (section "Short links and QR codes for wiki pages and items"), and **printed sticky labels** with a
+QR code and item data (section "Printing labels with QR codes and item data"). Steps 1 to 4 are shared; Step 5 is only
+for the Query UI.
 
 ## The problem
 
@@ -258,6 +259,109 @@ QR code notes:
 - The extension rate-limits creation to 10 per 2 minutes per IP, and admins cannot bypass it. For many QR codes (for
   example one per item) pace the calls, one every 13 seconds or more.
 
+## Printing labels with QR codes and item data
+
+The script `mute-er-model/etl/make_issue_labels.py` prints one sticky label per issue of the magazine on **Avery J8159 /
+L7159** stock (A4, 24 labels of 63.5 x 33.9 mm, 3 columns x 8 rows). It was built and run for Corpus Mute on 2026-11-22: 51
+issues, 3 sheets.
+
+Each label has, from left to right:
+
+- a **QR code** (25 mm) that encodes the full short link, `https://corpus.metamute.org/r/6`, so a phone camera opens it as a
+  link;
+- three lines of text: the **short URL without `https://`** on one line (7 pt, bold), the issue **sort key** (Property P16,
+  for example `1994-11-001-v01-n00.0`) underneath (6 pt), and the **issue ISSN token** (Property P9) as
+  `ISSN 1356-7748-01` (7 pt).
+
+The sort key and ISSN token are statements of the item, read live from the query service, and the labels follow publication
+order (P16), so sheet 1 starts with Q4 and sheet 3 holds Q52 to Q54.
+
+### How it works
+
+1. **Items:** a SPARQL query on `/query/proxy/sparql` returns every item with a Mute issue ID (P2), its sort key (P16) and
+   its ISSN token (P9, optional). It aborts unless it finds the expected count (`--expect`, default 51) and warns about
+   missing or duplicate tokens.
+2. **Short links:** for each item page (`https://corpus.metamute.org/wiki/Item:Q4`) it calls `action=shortenurl`, the same API
+   as the Query UI. The same URL always gets the same code, so an existing link (such as one made earlier for testing) is
+   reused. The extension allows 10 creations per 2 minutes per IP and admins cannot bypass that, so the script waits
+   `--pace` seconds (default 13) between new links: about 11 minutes for 51. A rate-limit reply is retried with a growing wait.
+   Results are saved after every link in `mute-er-model/output/issue_short_links.csv`, so an interrupted run resumes and a
+   re-run makes no API calls for known issues.
+3. **QR codes:** drawn locally with [`segno`](https://pypi.org/project/segno/) (pure Python, error correction level M), so
+   they do not count against the rate limit. `segno` was chosen because the workspace Python is a 3.16 alpha without wheels
+   for compiled packages.
+4. **Sheets:** the script writes `labels.html` (one A4 page per sheet, positions in millimetres) and, if Edge or Chrome is
+   installed, converts it with the browser's headless print-to-PDF to `labels.pdf`. Without a browser, open the HTML and
+   print it at 100%.
+
+Output is in `mute-er-model/output/labels/`: `labels.pdf`, `labels.html`, `test-grid.pdf`, `test-grid.html`.
+
+### Run it
+
+From the repository root (PowerShell):
+
+```powershell
+.venv\Scripts\python.exe -m pip install segno
+.venv\Scripts\python.exe mute-er-model\etl\make_issue_labels.py --test-grid   # numbered outlines, to check alignment
+.venv\Scripts\python.exe mute-er-model\etl\make_issue_labels.py --dry-run     # list the links it would create, create nothing
+.venv\Scripts\python.exe mute-er-model\etl\make_issue_labels.py               # create missing links, build labels.pdf
+```
+
+| Option | Use |
+| --- | --- |
+| `--start-position N` | First label to use on sheet 1 (1 = top left, 24 = bottom right), for a part-used sheet. Sheet 3 has 21 free labels, so `--start-position 4` fills it later. |
+| `--offset-x MM`, `--offset-y MM` | Nudge everything right/down (negative: left/up) after a test print. |
+| `--left MM`, `--top MM` | Set the margin to the first label directly. |
+| `--pace SECONDS` | Wait between new links (default 13; do not go below 12 with the default limit). |
+| `--site URL` | Wiki to read from and shorten against (default `https://corpus.metamute.org`). |
+| `--expect N` | Required item count (default 51; `0` switches the check off). |
+| `--outline` | Draw label outlines on the sheet (screen proof only; do not print this on real labels). |
+| `--no-pdf` | Write the HTML only. |
+| `--out-dir DIR` | Where output and the short-link cache go (default `mute-er-model/output`). |
+
+### Printing
+
+- Print the **PDF at 100% ("Actual size")**, never "Fit to page", single-sided, with the printer's own margin scaling off.
+- **Test first**: print `test-grid.pdf` on plain paper, hold it over a label sheet against the light, and correct with
+  `--offset-x` / `--offset-y` before using real labels.
+- Labels are not reprintable: do not feed a used sheet through the printer again. Use `--start-position` for part-used sheets.
+
+### What has and has not been checked
+
+- Checked: all 51 short links redirect (301) to their own item page and are unique; the PDF has 3 pages of A4; sheet 1 was
+  rendered in Edge and looked at, with the longest sort key (21 characters) fitting on its line.
+- **Not checked: the sheet geometry.** The label size (63.5 x 33.9 mm) and the 3 x 8 grid are given, but the 2.5 mm column
+  gap, the zero row gap and the margins (left 7.25 mm, top 12.9 mm, which centre the grid on the page) are assumptions,
+  because Avery's template page blocks automated access. That is why the test print is required.
+- Not checked: printing on real labels, and scanning a printed or on-screen QR code with a phone.
+
+### Adapting it
+
+- **Another wiki:** pass `--site`. The property IDs are Corpus Mute's: P2 (issue ID), P9 (ISSN token), P16 (sort key) in the
+  `QUERY` constant, and the item URL form `/wiki/Item:Qn` in `item_url()` (the item namespace prefix is `Item:` on this wiki).
+  Change those to your own.
+- **Other item data on the label:** add the property to the `SELECT` in `QUERY` and read it in `fetch_issues()`, then add a
+  `<div>` for it in `label_html()` and a style for it in the CSS of `build_html()`. The text column is about 31 mm wide (63.5 mm
+  label minus the QR code, gap and padding), so check the longest value fits.
+- **Another label stock:** change `LABEL_W`, `LABEL_H`, `COLS`, `ROWS`, `COL_GAP`, `ROW_GAP` at the top of the script, and
+  re-check the QR size and font sizes.
+- **Short links on the label instead of item links:** only the item URL in `item_url()` decides what the QR code leads to.
+
+### Things to watch
+
+- **One cache per wiki.** `issue_short_links.csv` is keyed by item number only. If you run the script against `localhost`
+  and then against production with the same `--out-dir`, it reuses the local links (`http://localhost:8091/r/...`) on the
+  production labels. Use a separate `--out-dir` for each site, or delete the CSV when you switch.
+- **Short links are per environment.** The `urlshortcodes` table is not synced between environments (see the troubleshooting
+  table), so labels made against production work only with production links.
+- **The label prints what the wiki holds.** On Corpus Mute, Q12 (sort key `1997-08-009-v01-n08.0`) has the ISSN token
+  `1356-7748-X8`, the only one that is not a plain number, so its label reads `ISSN 1356-7748-X8`. If that is a data error,
+  correct P9 on the wiki and rerun; known links are cached, so the rerun takes seconds.
+- **Do not delete the 51 short links** at `Special:ManageShortUrls`: a deleted code answers 404 and the printed QR code
+  stops working.
+- **The codes are permanent once printed.** Never change `$wgUrlShortenerIdSet` (Step 2) after printing, or every label
+  would point somewhere else.
+
 ## Troubleshooting
 
 | Symptom | Cause / fix |
@@ -269,6 +373,11 @@ QR code notes:
 | Everyone gets rate-limited together | `$wgCdnServersNoPurge` not set, so all visitors share Traefik's address. |
 | `urlshortener-error-badports` locally | Local URL has a port other than 80/443 and does not match `$wgCanonicalServer`. Set `$wgServer` to `http://localhost:PORT` or `$wgUrlShortenerAllowArbitraryPorts = true`. |
 | No "Get shortened URL" entry on pages | Desktop Minerva has none by default: add the hook in "Short links and QR codes" above (Vector shows it under Tools, mobile Minerva in the "..." menu). |
+| Label script waits a long time or prints `rate limited, waiting ...` | Expected: the extension allows 10 new links per 2 minutes per IP. Leave it running; it resumes from `issue_short_links.csv` if stopped. |
+| Label script stops with `expected 51 issues, found N` | The query service does not return the expected number of items (data change or the wdqs not in sync). Check with the Query UI, or pass `--expect 0`. |
+| Label script: `segno is missing` | Run `.venv\Scripts\python.exe -m pip install segno`. |
+| No `labels.pdf`, only the HTML | Neither Edge nor Chrome was found; open `labels.html` in a browser and print it at 100%, margins none. |
+| Printed labels are shifted against the sheet | Margins are assumed, not taken from Avery: print `--test-grid`, then adjust with `--offset-x` / `--offset-y`. |
 | Short links break after a database import | The `urlshortcodes` table holds absolute URLs of its own host. Do not copy it between environments (localhost links would land on production). Corpus Mute excludes it in `sync-db.sh`. |
 
 ## Where this lives in this repository
@@ -281,3 +390,5 @@ QR code notes:
 | Patched UI bundles | `wikibase-deploy/config/init.mjs`, `embedInit.mjs` |
 | Patch generator | `wikibase-deploy/scripts/patch-wdqs-shortener.sh` |
 | Production roll-out | `wikibase-deploy/scripts/server-branding.sh` (clones the extension, runs `update --quick`) |
+| Label generator (Avery J8159, QR code + item data) | `mute-er-model/etl/make_issue_labels.py` |
+| Label output and short-link cache | `mute-er-model/output/labels/` (`labels.pdf`, `test-grid.pdf`), `mute-er-model/output/issue_short_links.csv` |
