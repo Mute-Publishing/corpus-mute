@@ -18,6 +18,12 @@ $wgLogos = [
 # REL1_46, matching MediaWiki 1.46; gitignored, mounted at extensions/extensions/).
 $wgDefaultSkin = 'minerva';
 
+# Always show the wiki (item labels, descriptions, UI) in English, whatever the visitor's browser
+# language is. UniversalLanguageSelector (loaded by the WBS defaults) otherwise reads the browser's
+# Accept-Language header and switches anonymous visitors to that language ($wgLanguageCode stays 'en').
+# Visitors can still pick another language explicitly (ULS cookie / ?uselang=), which is respected.
+$wgULSLanguageDetection = false;
+
 wfLoadExtension( 'extensions/MobileFrontend' );
 $wgMFAutodetectMobileView = true;      # mobile browsers get the mobile view automatically
 $wgMFDefaultSkinClass = 'SkinMinerva'; # skin used in the mobile view
