@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Avery J8159 test grid</title>
+<style>
+@page { size: 210.0mm 297.0mm; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, Helvetica, sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.sheet { position: relative; width: 210.0mm; height: 297.0mm; overflow: hidden; padding: 12.900000000000006mm 0 0 7.25mm;
+  display: grid; grid-template-columns: repeat(3, 63.5mm); grid-auto-rows: 33.9mm;
+  column-gap: 2.5mm; row-gap: 0.0mm; align-content: start; justify-content: start; }
+.label { position: relative; outline: 0.25mm solid #000; display: flex; align-items: center; justify-content: center; font-size: 9pt; color: #555; }
+.label::before { content: attr(data-n); }
+.note { position: absolute; left: 7.25mm; bottom: 3mm; font-size: 7pt; color: #555; }
+</style></head><body><section class="sheet"><div class="label" data-n="1"></div><div class="label" data-n="2"></div><div class="label" data-n="3"></div><div class="label" data-n="4"></div><div class="label" data-n="5"></div><div class="label" data-n="6"></div><div class="label" data-n="7"></div><div class="label" data-n="8"></div><div class="label" data-n="9"></div><div class="label" data-n="10"></div><div class="label" data-n="11"></div><div class="label" data-n="12"></div><div class="label" data-n="13"></div><div class="label" data-n="14"></div><div class="label" data-n="15"></div><div class="label" data-n="16"></div><div class="label" data-n="17"></div><div class="label" data-n="18"></div><div class="label" data-n="19"></div><div class="label" data-n="20"></div><div class="label" data-n="21"></div><div class="label" data-n="22"></div><div class="label" data-n="23"></div><div class="label" data-n="24"></div>
+<div class="note">Test grid: 63.5 x 33.9 mm, 3 x 8, left 7.25 mm, top 12.90 mm. Print at 100% (Actual size), hold over a label sheet to the light.</div>
+</section></body></html>

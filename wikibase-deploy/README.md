@@ -106,6 +106,9 @@ How the pieces fit behind Traefik (one host, path-based routing):
 - The short link is `/r/CODE` (`$wgUrlShortenerTemplate` in `mute-local-settings.php`). Apache has no `/r/` rule, so
   Traefik's `shorturl-router` rewrites `/r/CODE` to `/wiki/Special:UrlRedirector/CODE` (`config/traefik-dynamic.yml`).
 - URLs up to 8000 characters are accepted; only the wiki's own host (and its non-standard port locally) may be shortened.
+- Short links and QR codes for wiki pages and items: Minerva's "..." page menu has a "Get shortened URL" entry (hook in
+  `mute-local-settings.php`; the extension itself only adds it in Minerva's mobile view or the Vector Tools sidebar).
+  `Special:UrlShortener?url=...` works in every skin; see the guide, "Short links and QR codes for wiki pages and items".
 - `urlshortcodes` is excluded from `sync-env.ps1` (short links store absolute URLs of their own host).
 - After a wdqs-frontend image upgrade regenerate `config/init.mjs` and `config/embedInit.mjs` from the new image with
   `scripts/patch-wdqs-shortener.sh` (it aborts if the upstream code no longer matches); see the guide, Step 5.

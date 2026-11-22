@@ -2,7 +2,7 @@
 
 ## 2026-11-22
 
-### Short links and QR codes for wiki pages and items (local)
+### Short links and QR codes for wiki pages and items (local + production)
 
 - The UrlShortener extension only offers "Get shortened URL" in the Tools sidebar (Vector etc.) or in Minerva's mobile view,
   so with Minerva as the desktop skin there was no way to it. `config/mute-local-settings.php` now adds the same entry to
@@ -11,6 +11,13 @@
 - Verified locally in the browser on `Item:Q4`: the entry opens a popup with the short link (`/r/8`), the alternative link,
   the QR code and a working "Download QR code" (`qrcode.svg`); both links redirect (301) to the item. Other hosts
   (wikidata.org) are still refused.
+- **Deployed to production** (backup first: `/var/backups/mute-wikibase/20261122-093800`; previous settings file in
+  `/opt/mute-wikibase/config/bak-20261122-093801`): pushed `mute-local-settings.php` (checksum matches local, `php -l` clean),
+  restarted `wikibase` + `jobrunner`. Verified on https://corpus.metamute.org/: the "Get shortened URL" entry is in the "..."
+  menu of `Item:Q4`; the popup shows the short link (`/r/6`), the alternative (`/r/_v`), the QR code and a working
+  "Download QR code" (`qrcode.svg`, valid SVG); both links redirect (301) to the item; `wikidata.org` URLs are refused
+  (`urlshortener-error-disallowed-url`); `Special:UrlShortener` loads; `wgUrlShortenerQrCodeShortenLimit` is 0. Short links
+  `/r/6` and `/r/_v` were created during testing and point at `Item:Q4`.
 - Guide updated: `docs/url-shortener.md`, section "Short links and QR codes for wiki pages and items".
 
 ## 2026-11-21

@@ -7,6 +7,10 @@ host, Traefik routing by path) and verified there on 2026-11-21, locally and in 
 Tested with `wikibase/wikibase:8.3.0` (MediaWiki 1.46.2), `wikibase/wdqs-frontend:2` (2.2.x), UrlShortener `REL1_46`
 (1.2.0), Traefik v3 as shipped in Wikibase Suite.
 
+The guide covers two things: short links for **Query UI** links (Steps 1 to 5 below) and short links plus **QR codes for
+wiki pages and items** (section "Short links and QR codes for wiki pages and items"). Steps 1 to 4 are shared; Step 5 is
+only for the Query UI.
+
 ## The problem
 
 The Query UI ships with one working shortener, `"urlShortener": "tinyurl"`. It asks `tinyurl.com` to shorten the link,
@@ -237,8 +241,13 @@ $wgUrlShortenerQrCodeShortenLimit = 0;
 ```
 
 The extension's own JavaScript binds to the menu entry, so no extra script is needed. Reload PHP afterwards (restart the
-wikibase container). The entry is not shown on `Special:` pages other than the main ones; use `Special:UrlShortener`
-there.
+wikibase container). The entry appears on content pages (items, properties, the Main Page) but not on `Special:` pages
+such as `Special:RecentChanges`; use `Special:UrlShortener` there.
+
+Verified on Corpus Mute (local and production): on `Item:Q4` the "..." menu shows "Get shortened URL"; the popup shows
+the short link, the alternative link and the QR code; "Download QR code" saves a valid `qrcode.svg`; both links return 301
+to the item. I checked the SVG is well formed but did not scan a printed or on-screen code with a phone, so test one
+before printing a batch.
 
 QR code notes:
 
@@ -266,7 +275,7 @@ QR code notes:
 
 | Piece | File |
 | --- | --- |
-| MediaWiki settings | `wikibase-deploy/config/mute-local-settings.php` |
+| MediaWiki settings, Minerva \"Get shortened URL\" menu entry, QR setting | `wikibase-deploy/config/mute-local-settings.php` |
 | Traefik route and rewrite | `wikibase-deploy/config/traefik-dynamic.yml` (`shorturl-router`, `shorturl-rewrite`) |
 | UI provider selection | `wikibase-deploy/config/wdqs-frontend-config.local.json`, `...prod.json` |
 | Patched UI bundles | `wikibase-deploy/config/init.mjs`, `embedInit.mjs` |
