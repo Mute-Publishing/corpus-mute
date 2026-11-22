@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-11-22
+
+### Short links and QR codes for wiki pages and items (local)
+
+- The UrlShortener extension only offers "Get shortened URL" in the Tools sidebar (Vector etc.) or in Minerva's mobile view,
+  so with Minerva as the desktop skin there was no way to it. `config/mute-local-settings.php` now adds the same entry to
+  Minerva's "..." page menu on desktop (hook `SkinTemplateNavigation::Universal`), and sets
+  `$wgUrlShortenerQrCodeShortenLimit = 0` so QR codes always encode the short link.
+- Verified locally in the browser on `Item:Q4`: the entry opens a popup with the short link (`/r/8`), the alternative link,
+  the QR code and a working "Download QR code" (`qrcode.svg`); both links redirect (301) to the item. Other hosts
+  (wikidata.org) are still refused.
+- Guide updated: `docs/url-shortener.md`, section "Short links and QR codes for wiki pages and items".
+
 ## 2026-11-21
 
 ### Query UI "Short URL" fixed: own URL shortener instead of TinyURL (local + production)

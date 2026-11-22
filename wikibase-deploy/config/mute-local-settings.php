@@ -35,10 +35,37 @@ $wgUrlShortenerTemplate = '/r/$1';
 $wgUrlShortenerIdSet = '23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
 # SPARQL query URLs are long (default limit 2000 characters).
 $wgUrlShortenerUrlSizeLimit = 8000;
+# QR codes always encode the SHORT link (default: only URLs over 200 bytes are shortened first). The
+# popup shows the short link, so the printed/scanned code then matches it; short links are also
+# shorter (a simpler, easier-to-scan code) and survive a later change of the page URL scheme.
+$wgUrlShortenerQrCodeShortenLimit = 0;
 # Traefik is the only client of the wiki: without this, MediaWiki sees Traefik's address as the client
 # of every request, so the extension's per-IP rate limit would be shared by all visitors. Trust the
 # X-Forwarded-For that Traefik sets (private Docker ranges only; Traefik overwrites client-sent values).
 $wgCdnServersNoPurge = array_merge( $wgCdnServersNoPurge ?? [], [ '172.16.0.0/12', '10.0.0.0/8', '192.168.0.0/16' ] );
+
+# "Get shortened URL" (short link + QR code popup) in the Minerva page menu (the "..." overflow menu).
+# UrlShortener only adds that entry when MobileFrontend is in MOBILE view, and Minerva has no Tools
+# sidebar, so desktop visitors on our default skin would get no way to a short link or QR code.
+# Same entry as the extension's own hook, without the mobile-view condition. The extension's JS
+# (ext.urlShortener.toolbar, loaded by the extension) binds to .menu__item--page-actions-overflow-urlshortener
+# and shows the popup with the short link and the downloadable QR code.
+$wgHooks['SkinTemplateNavigation::Universal'][] = static function ( $sktemplate, &$links ): void {
+	if ( $sktemplate->getSkinName() !== 'minerva' ||
+		$sktemplate->getTitle()->isSpecial( 'UrlShortener' ) ||
+		!$sktemplate->getAuthority()->isAllowed( 'urlshortener-create-url' )
+	) {
+		return;
+	}
+	$query = $sktemplate->getRequest()->getQueryValues();
+	unset( $query['title'], $query['useskin'], $query['mobileaction'] );
+	$fullUrl = $sktemplate->getTitle()->getFullURL( $query, false, PROTO_CANONICAL );
+	$links['actions']['urlshortener'] = [
+		'icon' => 'qrCode',
+		'href' => \MediaWiki\SpecialPage\SpecialPage::getTitleFor( 'UrlShortener' )->getLocalURL( [ 'url' => $fullUrl ] ),
+		'text' => $sktemplate->msg( 'urlshortener-toolbox' )->plain(),
+	];
+};
 
 # Left (hamburger) menu in Minerva: add a "Query" link to the SPARQL Query UI (/query/).
 # Minerva builds that menu in PHP with no hook for extra entries (only Home and Random can be

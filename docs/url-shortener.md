@@ -199,6 +199,56 @@ If the script aborts, upstream changed the shortener code. Compare with `UrlShor
    and check the popover shows `https://example.org/r/N`. Open it in a new tab: the same query loads.
 4. `curl -s https://example.org/query/custom-config.json` shows `"urlShortener": "local"`.
 
+## Short links and QR codes for wiki pages and items
+
+The same extension also gives short links and QR codes for any page of your own wiki, including Wikibase item and
+property pages (`/wiki/Item:Q4`). Links to other hosts, such as wikidata.org, are refused (`urlshortener-error-disallowed-url`).
+
+- **Special page (works in every skin):** `Special:UrlShortener`, optionally pre-filled with
+  `Special:UrlShortener?url=https://example.org/wiki/Item:Q4`. Shows the short link, the alternative `/r/_xx` link and a
+  downloadable QR code (SVG).
+- **From the page itself:** the extension adds a "Get shortened URL" entry, which opens a popup with a Copy button, the
+  alternative link and the QR code with a "Download QR code" button. Out of the box it appears only in the **Tools
+  sidebar of Vector/Timeless/MonoBook** and in **Minerva's menu in mobile view**. With Minerva as the desktop skin (as on
+  Corpus Mute) there is no entry at all, so add the hook below.
+- **API:** add `qrcode=1` to the `action=shortenurl` call to get the QR code back as SVG text in `shortenurl.qrcode`.
+
+```php
+# Minerva, desktop view: same entry the extension adds in mobile view (the "..." page menu).
+$wgHooks['SkinTemplateNavigation::Universal'][] = static function ( $sktemplate, &$links ): void {
+	if ( $sktemplate->getSkinName() !== 'minerva' ||
+		$sktemplate->getTitle()->isSpecial( 'UrlShortener' ) ||
+		!$sktemplate->getAuthority()->isAllowed( 'urlshortener-create-url' )
+	) {
+		return;
+	}
+	$query = $sktemplate->getRequest()->getQueryValues();
+	unset( $query['title'], $query['useskin'], $query['mobileaction'] );
+	$fullUrl = $sktemplate->getTitle()->getFullURL( $query, false, PROTO_CANONICAL );
+	$links['actions']['urlshortener'] = [
+		'icon' => 'qrCode',
+		'href' => \MediaWiki\SpecialPage\SpecialPage::getTitleFor( 'UrlShortener' )->getLocalURL( [ 'url' => $fullUrl ] ),
+		'text' => $sktemplate->msg( 'urlshortener-toolbox' )->plain(),
+	];
+};
+
+# QR codes always encode the short link (default: only URLs over 200 bytes are shortened first).
+$wgUrlShortenerQrCodeShortenLimit = 0;
+```
+
+The extension's own JavaScript binds to the menu entry, so no extra script is needed. Reload PHP afterwards (restart the
+wikibase container). The entry is not shown on `Special:` pages other than the main ones; use `Special:UrlShortener`
+there.
+
+QR code notes:
+
+- Without `$wgUrlShortenerQrCodeShortenLimit = 0` a QR code for a URL under 200 bytes encodes that URL itself, forced to
+  `http://`, so a scan costs an extra redirect to https. With `0` the code points to the short link, which is shorter
+  (checked on Corpus Mute: the SVG shrank from 6,901 to 5,292 characters for the same item) and stays valid if the page
+  URL scheme changes.
+- The extension rate-limits creation to 10 per 2 minutes per IP, and admins cannot bypass it. For many QR codes (for
+  example one per item) pace the calls, one every 13 seconds or more.
+
 ## Troubleshooting
 
 | Symptom | Cause / fix |
@@ -209,6 +259,7 @@ If the script aborts, upstream changed the shortener code. Compare with `UrlShor
 | Popover still shows TinyURL behaviour | Browser cached `custom-config.json` or `init.mjs`: hard refresh; check the served config says `local`. |
 | Everyone gets rate-limited together | `$wgCdnServersNoPurge` not set, so all visitors share Traefik's address. |
 | `urlshortener-error-badports` locally | Local URL has a port other than 80/443 and does not match `$wgCanonicalServer`. Set `$wgServer` to `http://localhost:PORT` or `$wgUrlShortenerAllowArbitraryPorts = true`. |
+| No "Get shortened URL" entry on pages | Desktop Minerva has none by default: add the hook in "Short links and QR codes" above (Vector shows it under Tools, mobile Minerva in the "..." menu). |
 | Short links break after a database import | The `urlshortcodes` table holds absolute URLs of its own host. Do not copy it between environments (localhost links would land on production). Corpus Mute excludes it in `sync-db.sh`. |
 
 ## Where this lives in this repository
