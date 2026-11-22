@@ -88,6 +88,8 @@ Use the `REL1_xx` branch that matches the image's MediaWiki version (8.3.0 = Med
 
 ### URL shortener (Query UI "Short URL to this page")
 
+**General, step-by-step guide for any Wikibase: [`../docs/url-shortener.md`](../docs/url-shortener.md).**
+
 The Query UI shortens links with MediaWiki's own `UrlShortener` extension (not TinyURL, which answers 403 to long
 query URLs). It is not in the image either; install it like MobileFrontend, create its table once, then restart:
 
@@ -105,7 +107,8 @@ How the pieces fit behind Traefik (one host, path-based routing):
   Traefik's `shorturl-router` rewrites `/r/CODE` to `/wiki/Special:UrlRedirector/CODE` (`config/traefik-dynamic.yml`).
 - URLs up to 8000 characters are accepted; only the wiki's own host (and its non-standard port locally) may be shortened.
 - `urlshortcodes` is excluded from `sync-env.ps1` (short links store absolute URLs of their own host).
-- Patching `init.mjs` again after a wdqs-frontend upgrade: keep the `local` provider and the `(r?"https://"+r:"")+"/w/api.php"` URL.
+- After a wdqs-frontend image upgrade regenerate `config/init.mjs` and `config/embedInit.mjs` from the new image with
+  `scripts/patch-wdqs-shortener.sh` (it aborts if the upstream code no longer matches); see the guide, Step 5.
 
 ### Load the data locally
 
