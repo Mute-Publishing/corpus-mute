@@ -11,12 +11,6 @@ book:
   repo-url: https://github.com/Mute-Publishing/corpus-mute/
   repo-subdir: quarto-book
   repo-branch: main
-  repo-actions: [source, issue]
-  sidebar:
-    tools:
-      - icon: github
-        text: GitHub repository
-        href: https://github.com/Mute-Publishing/corpus-mute
   chapters:
     - index.qmd
     - catalogue.ipynb
