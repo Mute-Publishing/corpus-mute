@@ -2,6 +2,15 @@
 
 ## 2026-11-22
 
+### English always shown, whatever the browser language (production)
+
+- `config/mute-local-settings.php`: `$wgULSLanguageDetection = false;`. UniversalLanguageSelector no longer switches
+  anonymous visitors to the browser's `Accept-Language`, so item pages (labels, descriptions, interface) show English.
+  Visitors can still choose a language explicitly (`?uselang=`, language selector).
+- Deployed on production: previous file kept as `/opt/mute-wikibase/config/mute-local-settings.php.bak-20261122`;
+  `wikibase` and `wikibase-jobrunner` restarted. Checked with `Accept-Language: de/es/fr`: pages come back `lang="en"`.
+  Local picks it up on its next `restart wikibase`.
+
 ### Print labels for the 51 issues (Avery J8159, QR code + item data)
 
 - New `mute-er-model/etl/make_issue_labels.py`: reads the 51 issues (P2) in sort-key order (P16) from the query service,

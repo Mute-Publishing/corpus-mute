@@ -1,0 +1,39 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Mute Magazine Catalogue"
+  subtitle: "Generated live from the Mute Corpus Wikibase"
+  author: "Mute Publishing"
+  date: today
+  downloads: [pdf, docx, epub]
+  repo-url: https://github.com/Mute-Publishing/corpus-mute/
+  repo-subdir: quarto-book
+  repo-branch: main
+  repo-actions: [source, issue]
+  sidebar:
+    tools:
+      - icon: github
+        text: GitHub repository
+        href: https://github.com/Mute-Publishing/corpus-mute
+  chapters:
+    - index.qmd
+    - catalogue.ipynb
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrbook
+  docx: default
+  epub:
+    toc: true
+
+execute:
+  enabled: true
+  echo: false
+  warning: false

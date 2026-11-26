@@ -1,0 +1,56 @@
+name: Publish Quarto book
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "quarto-book/**"
+      - ".github/workflows/publish-book.yml"
+  schedule:
+    - cron: "0 6 * * 1" # weekly, refreshes the live SPARQL data
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: quarto-book/requirements.txt
+
+      - run: pip install -r quarto-book/requirements.txt
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          tinytex: true
+
+      - name: Render book (HTML, PDF, DOCX, EPUB)
+        run: quarto render
+        working-directory: quarto-book
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: quarto-book/_book
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,3 @@
+# Preface {.unnumbered}
+
+This book is a catalogue of Mute magazine issues. All content in the next chapter is produced by SPARQL queries run against the Mute Corpus Wikibase at <https://corpus.metamute.org/> each time the book is rendered.
