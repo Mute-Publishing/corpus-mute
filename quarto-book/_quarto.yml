@@ -27,14 +27,20 @@ format:
     documentclass: scrbook
     papersize: a5
     fontsize: 10pt
+    include-in-header:
+      text: |
+        \usepackage{tgheros}
+        \renewcommand{\familydefault}{\sfdefault}
     geometry:
-      - inner=15mm
-      - outer=12mm
-      - top=15mm
-      - bottom=18mm
+      - inner=10mm
+      - outer=10mm
+      - top=10mm
+      - bottom=10mm
   docx: default
   epub:
     toc: true
+
+number-sections: false
 
 execute:
   enabled: true
