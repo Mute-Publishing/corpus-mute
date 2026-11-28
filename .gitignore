@@ -1,2 +1,6 @@
 /.quarto/
 **/*.quarto_ipynb
+/fonts/asgard/
+/fonts/boring/
+
+/.luarc.json

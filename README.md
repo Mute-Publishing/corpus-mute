@@ -125,3 +125,12 @@ Content: This work is licensed under a <a rel="license" href="http://creativecom
 Code: GPL 3.0
 
 <img src="images/gpl.png" alt="GPL 3.0" width="85"/>
+
+### Fonts
+
+The PDF edition of the Quarto book (`quarto-book/`) is typeset with open-licensed fonts stored in `fonts/`. Both are licensed under the [SIL Open Font License 1.1](https://openfontlicense.org/open-font-license-official-text/), which permits use, embedding in documents, and redistribution.
+
+  - **Inter** — designed by [Rasmus Andersson](https://rsms.me/) and The Inter Project Authors. Copyright (c) 2016 The Inter Project Authors. [Source](https://github.com/rsms/inter) · [Licence](fonts/inter/LICENSE.txt)
+  - **Lato** — designed by [Łukasz Dziedzic](https://www.latofonts.com/) (tyPoland). Copyright (c) 2010-2014 by tyPoland Lukasz Dziedzic with Reserved Font Name "Lato". [Source](https://github.com/google/fonts/tree/main/ofl/lato) · [Licence](fonts/lato/OFL.txt)
+
+Our thanks to the type designers for releasing their work as open fonts.

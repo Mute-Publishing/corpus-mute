@@ -27,10 +27,34 @@ format:
     documentclass: scrbook
     papersize: a5
     fontsize: 10pt
+    pdf-engine: xelatex
+    filters:
+      - bare-urls-as-href.lua
     include-in-header:
       text: |
-        \usepackage{tgheros}
-        \renewcommand{\familydefault}{\sfdefault}
+        \usepackage{fontspec}
+        \setmainfont{Inter-Regular.ttf}[
+          Path = ../fonts/inter/,
+          BoldFont = Inter-Bold.ttf,
+          ItalicFont = Inter-Italic.ttf,
+          BoldItalicFont = Inter-BoldItalic.ttf]
+        \setsansfont{Inter-Regular.ttf}[
+          Path = ../fonts/inter/,
+          BoldFont = Inter-Bold.ttf,
+          ItalicFont = Inter-Italic.ttf,
+          BoldItalicFont = Inter-BoldItalic.ttf]
+        \usepackage{etoolbox}
+        \usepackage{xcolor}
+        \usepackage{soul}
+        \setul{0.6ex}{0.4pt}
+        \setulcolor{black!40}
+        \newcommand{\greyul}[1]{\ul{#1}}
+        \AtBeginDocument{%
+          \hypersetup{hidelinks}%
+          \let\origHref\href
+          \renewcommand{\href}[2]{\origHref{#1}{\greyul{#2}}}%
+        }
+        \AtBeginEnvironment{longtable}{\footnotesize\setlength{\tabcolsep}{3pt}\renewcommand{\greyul}[1]{#1}}
     geometry:
       - inner=10mm
       - outer=10mm
